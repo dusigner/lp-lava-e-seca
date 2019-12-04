@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import { Header, Footer, SEO } from 'brastemp.components';
-import LavaESeca from "./widgets/lavaEseca/src/lavaESeca";
+import { Header, Footer } from 'brastemp.components';
+import LavaESeca from "./lavaEseca/src/lavaESeca";
 
 class lavaESeca extends Component {
 
