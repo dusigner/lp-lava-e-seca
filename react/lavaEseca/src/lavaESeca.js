@@ -7,7 +7,8 @@ import StickyBox from "react-sticky-box";
 
 // Components
 import properties from '../public/props.json'
-import Headline from './components/Headline' 
+import Headline from './components/Headline'
+import HeadlineB from './components/HeadlineB' 
 import Sections from './components/Section'
 import Menu from './components/Menu'
 import Button from './components/Button'
@@ -291,16 +292,18 @@ class lavaESeca extends React.Component {
 						<article className="section-page__featured">
 							<div className="section-page__featured_cover"></div>
 							<div className="section-page__featured_content">
+								<p>asdasdasd</p>
 
 								<div className="featured__heading">
-									<Headline 
+									<HeadlineB 
 										title={properties.sections.ciclo_tira_mancha.headline.title}
 										subtitle={properties.sections.ciclo_tira_mancha.headline.subtitle}
 										paragraphDefault={properties.sections.ciclo_tira_mancha.headline.paragraph.default}
-										notice={properties.sections.ciclo_tira_mancha.headline.notice.default.paragraph[0]}
+										// notice={properties.sections.ciclo_tira_mancha.headline.notice.default.paragraph[0]}
+										noticeParagraphList={properties.sections.ciclo_tira_mancha.headline.notice.default.paragraph}
 																
 									>
-									</Headline>			
+									</HeadlineB>			
 								</div>
 
 								<div className="featured_cover  my-default">
