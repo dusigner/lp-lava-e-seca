@@ -1,0 +1,261 @@
+/*****
+* DETALHES
+*****/
+.lava-e-seca #detalhes {
+    background: #F2F2F2;
+}
+.lava-e-seca .detalhes .container {
+    padding: 0 20px;
+}
+.lava-e-seca .detalhes .title-h3 {
+    width: 150px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 9px;
+    color: #7B7B7B;
+    text-transform: uppercase;
+}
+.lava-e-seca .detalhes .slider-counter {
+    position: absolute;
+    right: 25px;
+    top: 80px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 171.94%;
+    color: #757575;
+    letter-spacing: -2px;
+}
+.lava-e-seca .detalhes {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.lava-e-seca .detalhes .detalhes-cesto_inox {
+    margin-top: -130px;
+}
+
+.slider-detalhes .slider-detalhes__slide{
+    padding-left: 20px;
+}
+
+.slider-detalhes .slick-prev, 
+.slider-detalhes .slick-next  {
+    background: none;
+    border: none;
+    color: transparent;
+    width: 46px;
+    height: 37px;
+    cursor: pointer;
+    position: absolute;
+    top: -65px;
+    padding: 0;
+}
+.slider-detalhes .slick-prev {
+    right: 80px;
+}
+.slider-detalhes .slick-next {
+    right: 20px;
+}
+.slider-detalhes .slick-prev::before, 
+.slider-detalhes .slick-next::before {
+    content: "";
+    width: 46px;
+    height: 37px;
+    display: inline-block;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: #F08B1D;
+}
+.slider-detalhes .slick-prev::before {
+    -webkit-mask: url(../imgs/arrow-prev-small.svg) no-repeat 50% 50%;
+    mask: url(../imgs/arrow-prev-small.svg) no-repeat 50% 50%;
+}
+.slider-detalhes .slick-next::before {
+    -webkit-mask: url(../imgs/arrow-next-small.svg) no-repeat 50% 50%;
+    mask: url(../imgs/arrow-next-small.svg) no-repeat 50% 50%;
+}
+.slider-detalhes .slick-disabled::before {
+    background-color: #dadada;
+}
+
+.slider-lindo {
+    margin-top: -96px;
+}
+.slider-lindo .slick-prev, 
+.slider-lindo .slick-next  {
+    color: transparent;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+    right: 50px;
+    padding: 0;
+    border-radius: 50%;
+    z-index: 9;
+}
+.slider-lindo .slick-prev {
+    right: 20%;
+    background: linear-gradient(135deg, #D4D4D4 0%, #757575 100%);
+    border: 1px solid #B1B1B1;
+}
+.slider-lindo .slick-next {
+    right: 10%;
+    background: #FFFFFF;
+    border: 1px solid #B1B1B1;
+}
+
+.slider-lindo .slick-prev::before, 
+.slider-lindo .slick-next::before {
+    content: "";
+    width: 31px;
+    height: 31px;
+    display: block;
+    mask: unset;
+    mask-size: unset !important;
+    -webkit-mask: unset;
+    -webkit-mask-size: unset !important;
+    background-color: transparent;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    border-radius: 50%;
+}
+
+.slider-lindo .slick-disabled::before {
+    border: 2px solid #DB532A;
+}
+
+@media (min-width: 1024px) {
+    .lava-e-seca .detalhes .title-h3 {
+        width: 237px;
+        font-size: 28px;
+        line-height: 125.7%;
+        margin-top: 65px;
+    }
+    .lava-e-seca .detalhes .slider-counter {
+        font-weight: 300;
+        font-size: 38px;
+        left: 20px;
+        top: 480px;
+        letter-spacing: -5px;
+    }
+    .lava-e-seca .detalhes {
+        max-width: 1300px;
+        margin: 0 auto;
+        max-height: 627px;
+    }
+    .lava-e-seca .detalhes .detalhes-cesto_inox {
+        margin-top: 0;
+        max-height: 100%;
+    }
+    .slider-detalhes .slick-prev {
+        left: 20px;
+    }
+    .slider-detalhes .slick-next {
+        left: 120px;
+    }
+    .slider-detalhes .slick-prev, 
+    .slider-detalhes .slick-next {
+        width: 72px;
+        height: 55px;
+        top: 450px;
+        z-index: 99;
+    }
+    .slider-detalhes .slick-prev::before, 
+    .slider-detalhes .slick-next::before {
+        width: 80px;
+        height: 60px;
+    }
+    .slider-detalhes .slick-prev::before {
+        -webkit-mask: url(../imgs/arrow-prev-big.svg) no-repeat 50% 50%;
+        mask: url(../imgs/arrow-prev-big.svg) no-repeat 50% 50%;
+    }
+    .slider-detalhes .slick-next::before {
+        -webkit-mask: url(../imgs/arrow-next-big.svg) no-repeat 50% 50%;
+        mask: url(../imgs/arrow-next-big.svg) no-repeat 50% 50%;
+    }
+    .slider-detalhes {
+        margin-top: -228px;
+        margin-bottom: -4px;
+        padding-left: 0;
+    }
+    .slider-detalhes__slide .section-page__headline {
+        margin-top: 232px;
+        position: absolute;
+    }
+    .slider-detalhes__slide {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 627px;
+    }
+    .slider-detalhes__slide div:first-child {
+        grid-column: 1;
+    }
+    .slider-detalhes__slide div:last-child {
+        grid-column: 2;
+        /* display: flex;
+        justify-content: flex-end; */
+    }
+    .slider-lindo {
+        max-height: 627px;
+        margin-top: 0;
+    }
+    .slider-lindo img {
+        max-width: 85%;
+    }
+    .slider-lindo img {
+        max-width: 85%;
+    }
+    .slider-lindo .slick-prev, 
+    .slider-lindo .slick-next  {
+        color: transparent;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        position: absolute;
+        top: 83%;
+        right: 50px;
+        padding: 0;
+        border-radius: 50%;
+        z-index: 9;
+    }
+    .slider-lindo .slick-prev {
+        left: 53%;
+        background: linear-gradient(135deg, #D4D4D4 0%, #757575 100%);
+        border: 1px solid #B1B1B1;
+    }
+    .slider-lindo .slick-next {
+        left: 57%;
+        background: #FFFFFF;
+        border: 1px solid #B1B1B1;
+    }
+
+    .slider-lindo .slick-prev::before, 
+    .slider-lindo .slick-next::before {
+        content: "";
+        width: 31px;
+        height: 31px;
+        display: block;
+        mask: unset;
+        mask-size: unset !important;
+        -webkit-mask: unset;
+        -webkit-mask-size: unset !important;
+        background-color: transparent;
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        border-radius: 50%;
+    }
+    .slider-lindo__slide {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .slick-slide img {
+        max-height: 627px;
+    }
+    
+}

@@ -1,0 +1,66 @@
+.funcao-volto-logo {
+    padding-top: 38.4px;
+    background: black;
+    padding-bottom: 34px;
+}
+.funcao-volto-logo .container{
+    padding: 0 20px;
+}
+.funcao-volto-logo p{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 19.75px;
+    margin-bottom: 31px;
+}
+
+.funcao-volto-logo p.small{
+    margin: 0;
+    font-size: 10px;
+    line-height: 12px;
+    color: white;
+    text-align: left;
+}
+
+.funcao-volto-logo .see-more{
+    display: none;
+}
+
+
+@media (min-width: 1023px) {
+    .funcao-volto-logo{
+        background-image: url("../imgs/funca-volto-logo-1366.png");
+        position: relative;
+        padding-bottom: 84px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .funcao-volto-logo::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: linear-gradient(89.27deg, #202020 35.54%, rgba(0, 0, 0, 0) 90.91%);
+        top: 0;
+    }
+    .funcao-volto-logo .title-default {
+        margin-top: 115px;
+        font-size: 48px;
+        line-height: 88px;
+    }
+    .funcao-volto-logo p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 15px;
+        margin-bottom: 31px;
+        max-width: 404px;
+    }
+    .funcao-volto-logo picture {
+        display: none;
+    }
+    .funcao-volto-logo .see-more{
+        display: flex;
+    }
+}
