@@ -1,24 +1,24 @@
 import React, {Component} from 'react';
+import { CardProdutoVitrine } from "brastemp.components";
 
 // Libs
 import Slider from "react-slick";
 import StickyBox from "react-sticky-box";
 
 // Components
-import properties from '../public/props.json';
+import properties from '../public/props.json'
 import Headline from './components/Headline' 
 import Sections from './components/Section'
 import Menu from './components/Menu'
 import Button from './components/Button'
 import SeeMore from './components/SeeMore'
 import Modal from './components/Modal'
-import ModalCompare from './components/ModalCompare'
+import ModalCompareImage from './components/ModalCompareImage'
+import ModalTypeStainList from './components/ModalTypeStainList'
 import Video from './components/Video'
 
 // Modal
 import ButtonOutline from './components/ButtonOutlineRounded'
-import ModalFoo from './components/ModalFoo'
-import ModalBar from './components/ModalBar'
 
 // Assets
 import './lava-e-seca.global.css';
@@ -63,8 +63,6 @@ const cicloUmaHoraFeaturedImageCoverMid = "https://res.cloudinary.com/dins1gjdy/
 
 class lavaESeca extends React.Component {
 
-
-	
 	state = { currentSrc: '' };
 
 	onLoad = (event) => {
@@ -134,6 +132,7 @@ class lavaESeca extends React.Component {
 		return (
 
 			<div className="lava-e-seca">
+				
 				<Sections id="intro"  setClass="intro animation"> 
 					<div className="container">
 						<div className="page-title">
@@ -479,11 +478,15 @@ class lavaESeca extends React.Component {
 
 				<aside className="container-overlay  invisible">
 					<ButtonOutline label="Fechar" /> 
-					<ModalFoo />
-					<ModalBar 
+					<ModalCompareImage />
+					<ModalTypeStainList
 						title={properties.sections.ciclo_tira_mancha.modal.stain.title}
-						collection={properties.sections.ciclo_tira_mancha.modal.stain.type_stain}
-					></ModalBar>		
+						columOne={properties.sections.ciclo_tira_mancha.modal.stain.type_stain.one}
+						columTwo={properties.sections.ciclo_tira_mancha.modal.stain.type_stain.two}
+						columThree={properties.sections.ciclo_tira_mancha.modal.stain.type_stain.three}
+						columFour={properties.sections.ciclo_tira_mancha.modal.stain.type_stain.four}
+						columFive={properties.sections.ciclo_tira_mancha.modal.stain.type_stain.five}
+					></ModalTypeStainList>		
 				</aside>
 
 			</div>

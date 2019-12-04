@@ -1,7 +1,4 @@
 import React from 'react'
-import Modal from './ModalCompare'
-
-import properties from '../../public/props.json'
 
 export default props => {
 
@@ -56,8 +53,6 @@ export default props => {
         const action =  compareActionNames(action_list)
 
         const init = toApply()
-
-        // console.log(properties. )
 
         action ? init.modal(action_list, action[labelAction].classAttr) : null    
 

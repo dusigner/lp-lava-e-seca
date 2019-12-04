@@ -21,13 +21,48 @@
 }
 
 .modal__heading_before {
-    top: 30px;
-    left: -15%
+	top: 30px;
+	top: 27vh;
+	left: -15%;
+	left: 17vw;
 }
 
 .modal__heading_after {
-    right: -15%;
-    bottom: 0;
+	right: -15%;
+	right: 20vw;
+	bottom: 0;
+	bottom: 25vh;
+}
+
+.modal__header,
+.modal__footer {
+	position: absolute;
+	width: 100%;
+}
+
+.modal__header {
+	text-align: center;
+}
+
+.modal__header .modal__title {
+	position: relative;
+	top: 90px;
+	font-size: 17px;
+	font-weight: 100;
+}
+
+.modal__footer {
+	bottom: 0;
+	text-align: center;
+	padding: 42px 0;
+}
+
+.modal__footer  .modal__paragraph {
+	max-width: 735px;
+	margin: auto;
+	font-size: .75rem;
+	font-size: 12px;
+	font-weight: 100;
 }
 
 .modal__compare .title-default {
@@ -36,7 +71,8 @@
 }
 
 /*  */
-.modal-foo {
+.modal-compare-image {
+	position: relative;
     overflow: hidden;
     max-height: 474px;
     max-width: 844px;
@@ -44,7 +80,7 @@
     height: 474px;
     margin: auto;
 }
-.modal-foo figure { 
+.modal-compare-image figure { 
 	background-image: url('https://res.cloudinary.com/dins1gjdy/image/upload/v1575303726/whirlpool/diferenciais__modalCompare_before_j1y3wg.png');
 	background-size: cover;
 	font-size: 0;
@@ -58,6 +94,7 @@
 	background-size: cover;
 	bottom: 0;
 	border-right: 5px solid rgba(255,255,255,0.7);
+	border-right: 2px solid rgba(240,139,29,1);
 	box-shadow: 10px 0 15px -13px #000;
 	height: 100%;
 	max-width: 98.6%;
@@ -124,7 +161,8 @@ input#slider::-ms-tooltip {
 	display:none;
 }
 #compare::before {
-	background: url(https://webdevtrick.com/wp-content/uploads/comparision.png) no-repeat scroll 0 center transparent;
+	/* background: url(https://webdevtrick.com/wp-content/uploads/comparision.png) no-repeat scroll 0 center transparent; */
+	background: url('../../imgs/arrow-slider.png') no-repeat scroll 0 center transparent;
 	background-size:contain;
 	content: " ";
 	float: right;
@@ -134,21 +172,68 @@ input#slider::-ms-tooltip {
 	top:0;
 	width: 64px;
 }
+/*  */
 
-.is-compare .modal-foo {
+.modal-list-stain {
+	overflow-y: auto;
+	height: 100%;
+	margin: 150px auto auto auto;
+	/* width: 1226px; */
+
+}
+
+.stain-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.stain-list__item {
+	height: 31px;
+	line-height: 31px;
+	padding-left: 21px;
+	font-size: 14px;
+	font-weight: 100;
+}
+
+.stain-list__item:nth-of-type(odd) {
+	background: rgba(245,245,245,1)
+}
+
+.list-four {}
+
+.is-compare .header-compare-image,
+.is-compare .modal-compare-image {
     display: initial;
 }
 
-.is-see-more .modal-bar {
-    display: initial;
+.is-see-more .header-list-stain {
+	display: initial;	
+}
+.is-see-more .modal-list-stain {
+    display: grid;
 }
 
-.is-see-more .modal-foo {
+.is-see-more .header-compare-image,
+.is-see-more .footer-compare-image,
+.is-see-more .modal-compare-image {
     display: none;
 }
 
-.is-compare .modal-bar {
+.is-compare .header-list-stain,
+.is-compare .modal-list-stain {
     display: none;
+}
+
+.is-see-more .modal__heading_before,
+.is-see-more .modal__heading_after {
+	display: none;
+}
+
+.is-compare,
+.is-see-more {
+	animation: showModal 1s ease; 
+	-webkit-animation: showModal 1s ease; 
 }
 
 @keyframes first {
@@ -162,3 +247,27 @@ input#slider::-ms-tooltip {
     100% {width: 50%; }
   }
 
+@keyframes showModal {
+	from {
+		transform: translate3d(0, 100%, 0)
+	}
+	to {
+		transform: translate3d(0, 0, 0)
+	}
+}
+
+
+@media (min-width: 680px) {
+
+	.modal-list-stain {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		height: 476px;
+		margin: auto;
+	}
+
+	.modal__header .modal__title {
+		font-size: 3rem;
+		font-size: 48px;
+	}
+}

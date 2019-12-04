@@ -65,50 +65,60 @@
 			"modal":{
 				"stain": {
 					"title": "Remove mais de 40 tipos de manchas",
-					"type_stain": [
-						"Azeite extra",
-						"Beterraba",
-						"Brigadeiro",
-						"Caldo de ameixa",
-						"Caldo de cereja",
-						"Caneta marca texto",
-						"Canetinha hidrocor",
-						"Caramelo",
-						"Cerveja clara",
-						"Cerveja preta",
-						"Refrigerante de cola",
-						"Cola branca",
-						"Látex escolar",
-						"Creme de pitaya ",
-						"Enxaguante bucal",
-						"Refrigerante de uva",
-						"Geleia de amora",
-						"Geleia de morango",
-						"Gema de ovo",
-						"Gordura de bacon",
-						"Groselha",
-						"Iodo",
-						"Iogurte de morango",
-						"Ketchup",
-						"Lápis de cor",
-						"Manga",
-						"Manteiga",
-						"Maquiagem",
-						"Mel",
-						"Mingau de aveia",
-						"Molho barbecue",
-						"Molho de tomate",
-						"Molho de pimenta",
-						"Molho de yakissoba",
-						"Óleo",
-						"Papinha (batata e cenoura / banana e aveia)",
-						"Pasta de dente",
-						"Polpa de mamão",
-						"Polpa de maracujá",
-						"Sangue bovino",
-						"Sorvete de morango",
-						"Suco de laranja e de tomate"
-					]
+					"type_stain": {
+						"one": [
+							"Azeite extra",
+							"Beterraba",
+							"Brigadeiro",
+							"Caldo de ameixa",
+							"Caldo de cereja",
+							"Caneta marca texto",
+							"Canetinha hidrocor",
+							"Caramelo",
+							"Cerveja clara",
+							"Cerveja preta"
+						],
+						"two": [
+							"Refrigerante de cola",
+							"Cola branca",
+							"Látex escolar",
+							"Creme de pitaya ",
+							"Enxaguante bucal",
+							"Refrigerante de uva",
+							"Geleia de amora",
+							"Geleia de morango",
+							"Gema de ovo",
+							"Gordura de bacon"
+						],
+						"three": [
+							"Groselha",
+							"Iodo",
+							"Iogurte de morango",
+							"Ketchup",
+							"Lápis de cor",
+							"Manga",
+							"Manteiga",
+							"Maquiagem",
+							"Mel",
+							"Mingau de aveia"
+						],
+						"four": [
+							"Molho barbecue",
+							"Molho de tomate",
+							"Molho de pimenta",
+							"Molho de yakissoba",
+							"Óleo",
+							"Papinha (batata e cenoura / banana e aveia)",
+							"Pasta de dente",
+							"Polpa de mamão",
+							"Polpa de maracujá"
+						],
+						"five": [
+							"Sangue bovino",
+							"Sorvete de morango",
+							"Suco de laranja e de tomate"
+						]
+					}
 				}
 			}
 		},
