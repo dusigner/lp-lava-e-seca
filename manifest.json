@@ -2,7 +2,7 @@
   "vendor": "brastemp",
   "name": "lpbrastemp-lavaeseca",
   "version": "0.1.2",
-  "title": "Brastemp Masterchef",
+  "title": "Brastemp Lava e Seca",
   "description": "Landing Page Brastemp Lava e Seca",
   "defaultLocale": "pt-BR",
   "builders": {
