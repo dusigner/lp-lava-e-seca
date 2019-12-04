@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { CardProdutoVitrine } from "brastemp.components";
 
 // Libs
 import Slider from "react-slick";
@@ -23,6 +22,7 @@ import ButtonOutline from './components/ButtonOutlineRounded'
 // Assets
 import './lava-e-seca.global.css';
 
+// Images
 import introBannerSmall from '../imgs/intro-banner-360.png'; //360
 import introBannerMedium from '../imgs/intro-banner-720.png'; //720
 import introBannerLarge from '../imgs/intro-banner-1060.png'; //1060
@@ -132,7 +132,6 @@ class lavaESeca extends React.Component {
 		return (
 
 			<div className="lava-e-seca">
-				
 				<Sections id="intro"  setClass="intro animation"> 
 					<div className="container">
 						<div className="page-title">
@@ -454,27 +453,6 @@ class lavaESeca extends React.Component {
 				<Sections id="play-video" setClass="play-video">
 					<Video setSrc="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" />
 				</Sections>
-
-				{/* <CardProdutoVitrine
-                    key={index}
-                    brand={"Brastemp"}
-                    position={index + 1}
-                    produto={item}
-                    categoria={item.categoriaNome}
-                    page={page}
-                    list={list}
-                    price={price}
-                    installment={installment}
-                    comparar={comparar}
-                    handleCompareProducts={this.handleCompareProducts}
-                    products={products[index].linkText}
-                    pageDepartment={pageDepartment}
-                    disableCompareBtn={disableCompareBtn}
-                    listPrice={listPrice}
-                    buttonTitle={buttonTitle}
-                    cardHibrid={cardHibrid}
-                    external={external}
-                /> */}
 
 				<aside className="container-overlay  invisible">
 					<ButtonOutline label="Fechar" /> 
