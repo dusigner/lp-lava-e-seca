@@ -1,0 +1,36 @@
+{
+  "vendor": "brastemp",
+  "name": "lpbrastemp-lavaeseca",
+  "version": "0.1.0",
+  "title": "Brastemp Masterchef",
+  "description": "Landing Page Brastemp Lava e Seca",
+  "defaultLocale": "pt-BR",
+  "builders": {
+    "pages": "0.x",
+    "react": "2.x"
+  },
+  "mustUpdateAt": "2020-03-15",
+  "categories": [],
+  "registries": [
+    "smartcheckout"
+  ],
+  "settingsSchema": {},
+  "scripts": {
+    "postreleasy": "vtex publish --verbose"
+  },
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "brastemp.vtexcommercestable.com.br"
+      }
+    }
+  ],
+  "dependencies": {
+    "vtex.store-graphql": "2.x",
+    "vtex.store": "1.x",
+    "brastemp.components": "1.x",
+    "brastemp.queries": "1.x"
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
