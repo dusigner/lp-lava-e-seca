@@ -23,43 +23,43 @@ import ButtonOutline from './components/ButtonOutlineRounded'
 // Assets
 import './lava-e-seca.global.css';
 
-const introBannerSmall = 'https://dusigner.com.br/intro-banner-360.png'; //360
-const introBannerMedium = 'https://dusigner.com.br/intro-banner-720.png'; //720
-const introBannerLarge = 'https://dusigner.com.br/intro-banner-1060.png'; //1060
+import introBannerSmall from '../imgs/intro-banner-360.png'; //360
+import introBannerMedium from '../imgs/intro-banner-720.png'; //720
+import introBannerLarge from '../imgs/intro-banner-1060.png'; //1060
 
-const diferenciaisImageCoverMid = 'https://dusigner.com.br/diferenciais__cover_mid.png'; // 744
-const diferenciaisImageCoverLarge = 'https://dusigner.com.br/diferenciais__cover_large.png'; // 1178
+//import diferenciaisImageCoverMid from '../imgs/diferenciais__cover_mid.png'; // 744
+//import diferenciaisImageCoverLarge from '../imgs/diferenciais__cover_large.png'; // 1178
 
-const detalhesPainelTouchSmall = 'https://dusigner.com.br/detalhes-painel_touch-360.png'; //360
-const detalhesPainelTouchMedium = 'https://dusigner.com.br/detalhes-painel_touch-720.png'; //720
+import detalhesPainelTouchSmall from '../imgs/detalhes-painel_touch-360.png'; //360
+import detalhesPainelTouchMedium from '../imgs/detalhes-painel_touch-720.png'; //720
 
-const detalhesLindoDesignGraySmall = 'https://dusigner.com.br/detalhes-lindo_design_gray-307.png'; //307
-const detalhesLindoDesignGrayMedium = 'https://dusigner.com.br/detalhes-lindo_design_gray-614.png'; //614
-const detalhesLindoDesignGrayLarge = 'https://dusigner.com.br/detalhes-lindo_design_gray-852.png'; //307
-const detalhesLindoDesignGrayXlarge = 'https://dusigner.com.br/detalhes-lindo_design_gray-1704.png'; //614
+import detalhesLindoDesignGraySmall from '../imgs/detalhes-lindo_design_gray-307.png'; //307
+import detalhesLindoDesignGrayMedium from '../imgs/detalhes-lindo_design_gray-614.png'; //614
+import detalhesLindoDesignGrayLarge from '../imgs/detalhes-lindo_design_gray-852.png'; //307
+import detalhesLindoDesignGrayXlarge from '../imgs/detalhes-lindo_design_gray-1704.png'; //614
 
-const detalhesLindoDesignWhiteSmall = 'https://dusigner.com.br/detalhes-lindo_design_white-307.png'; //307
-const detalhesLindoDesignWhiteMedium = 'https://dusigner.com.br/detalhes-lindo_design_white-614.png'; //614
-const detalhesLindoDesignWhiteLarge = 'https://dusigner.com.br/detalhes-lindo_design_white-852.png'; //307
-const detalhesLindoDesignWhiteXlarge = 'https://dusigner.com.br/detalhes-lindo_design_white-1704.png'; //614
+import detalhesLindoDesignWhiteSmall from '../imgs/detalhes-lindo_design_white-307.png'; //307
+import detalhesLindoDesignWhiteMedium from '../imgs/detalhes-lindo_design_white-614.png'; //614
+import detalhesLindoDesignWhiteLarge from '../imgs/detalhes-lindo_design_white-852.png'; //307
+import detalhesLindoDesignWhiteXlarge from '../imgs/detalhes-lindo_design_white-1704.png'; //614
 
-const detalhesCestoInoxSmall = 'https://dusigner.com.br/detalhes-cesto_inox-333.png'; //333
-const detalhesCestoInoxMedium = 'https://dusigner.com.br/detalhes-cesto_inox-666.png'; //666
-const detalhesCestoInoxLarge = 'https://dusigner.com.br/detalhes-cesto_inox-931.png'; //333
-const detalhesCestoInoxXlarge = 'https://dusigner.com.br/detalhes-cesto_inox-1862.png'; //666
+import detalhesCestoInoxSmall from '../imgs/detalhes-cesto_inox-333.png'; //333
+import detalhesCestoInoxMedium from '../imgs/detalhes-cesto_inox-666.png'; //666
+import detalhesCestoInoxLarge from '../imgs/detalhes-cesto_inox-931.png'; //333
+import detalhesCestoInoxXlarge from '../imgs/detalhes-cesto_inox-1862.png'; //666
 
-const funcaVoltoLogoSmall = 'https://dusigner.com.br/funca-volto-logo-322.png';
-const funcaVoltoLogoMedium = 'https://dusigner.com.br/funca-volto-logo-644.png';
+import funcaVoltoLogoSmall from '../imgs/funca-volto-logo-322.png';
+import funcaVoltoLogoMedium from '../imgs/funca-volto-logo-644.png';
 
-const cicloEdredomSmall = 'https://dusigner.com.br/ciclo-edredon-322.png';
-const cicloEdredomMedium = 'https://dusigner.com.br/ciclo-edredon-644.png';
-const cicloEdredomLarge = 'https:///ciclo-edredon-1178.png';
+import cicloEdredomSmall from '../imgs/ciclo-edredon-322.png';
+import cicloEdredomMedium from '../imgs/ciclo-edredon-644.png';
+import cicloEdredomLarge from '../imgs/ciclo-edredon-1178.png';
 
-const cicloTiraManchasCoverMid = "https://res.cloudinary.com/dins1gjdy/image/upload/v1575296961/whirlpool/ciclo-tira-manchas__cover_mid_rtkb1e.png"
-const cicloTiraManchasFeaturedImageCanetinha = "https://res.cloudinary.com/dins1gjdy/image/upload/v1575242021/whirlpool/tira-manchas__featured-canetinha_mid_jfe42z.png"
-const cicloTiraManchasFeaturedImageGordura = "https://res.cloudinary.com/dins1gjdy/image/upload/v1575242031/whirlpool/tira-manchas__featured-gordura_mid_rrzeah.png"
+import cicloTiraManchasCoverMid from '../imgs/ciclo-tira-manchas__cover_mid.png';
+import cicloTiraManchasFeaturedImageCanetinha from '../imgs/tira-manchas__featured-canetinha_mid.png';
+import cicloTiraManchasFeaturedImageGordura from '../imgs/tira-manchas__featured-gordura_mid.png';
 
-const cicloUmaHoraFeaturedImageCoverMid = "https://res.cloudinary.com/dins1gjdy/image/upload/v1575241822/whirlpool/ciclo-uma-hora__cover_mid_ax5rwo.png"
+import cicloUmaHoraFeaturedImageCoverMid from '../imgs/ciclo-uma-hora__cover_mid.png';
 
 class lavaESeca extends React.Component {
 
