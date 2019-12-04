@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "apollo-client": "^2.4.7",
+    "graphql": "^14.0.2",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-apollo": "^2.3.2",
+    "react-before-after-slider": "^1.0.4",
+    "react-compare-image": "^2.0.3",
+    "react-cookies": "^0.1.0",
+    "react-headroom": "^2.2.2",
+    "react-intl": "^2.7.2",
+    "react-responsive": "^5.0.0",
+    "react-scroll-to-component": "1.0.2",
+    "react-select": "2.0.0",
+    "react-slick": "0.23.1",
+    "react-sticky-box": "^0.9.1",
+    "slick-carousel": "1.8.1"
+  },
+  "devDependencies": {}
+}
