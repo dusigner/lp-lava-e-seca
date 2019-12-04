@@ -1,0 +1,181 @@
+{
+	"sections": {
+		"intro": {
+			"title": "Lava e Seca Brastemp",
+			"subtitle": "Noviade",
+			"description": "Toda a qualidade de lavagem e secagem de uma Brastemp, agora em uma única máquina.",
+			"seemore": "Veja mais"
+		},
+		"detalhes": {
+			"title": "Detalhes que importam",
+			"headline": [
+				{
+					"title": "Painel",
+					"subtitle": "Full Touch"
+				},
+				{
+					"title": "Sofisticado",
+					"subtitle": "Design"
+				},
+				{
+					"title": "Cesto",
+					"subtitle": "Inox"
+				}
+			]
+		},
+		"diferenciais": {
+			"title": "Diferenciais",
+			"headline": {
+				"title": "Certificado",
+				"subtitle": "Woolmark Apparel Carel",
+				"paragraph": {
+					"default": "Lave suas roupas com o máximo cuidado até as lãs mais dedicadas."
+				}
+			},
+			"bg": {
+				"url": ""
+			}
+		},
+		"ciclo_tira_mancha": {
+			"headline": {
+				"title": "Ciclo",
+				"subtitle": "Tira Manchas Pro",
+				"paragraph": {
+					"default": "Ciclo 100% otimizado que alterna as condições ideais de temperatura e velocidade de movimentação do cesto para máxima performance de lavagem, removendo* mais de 40** tipos de manchas, desde as mais frequentes até as mais difíceis, como gordura, sangue*** e canetinha, sem danificar os tecidos."
+				},
+				"notice": {
+					"default": {
+						"paragraph": [
+							"*Conforme teste interno de percepção realizado com 63 manchas em tecido de algodão.",
+							"** Verifique a lista de manchas testadas no manual do produto.",
+							"*** bovino"
+						]
+
+					},"mobile": {
+						"paragraph": []
+					}
+				}
+			},
+			"featured": {
+				"title": ""
+			},
+			"bg": {
+				"url": ""
+			},
+			"modal":{
+				"stain": {
+					"title": "Remove mais de 40 tipos de manchas",
+					"type_stain": {
+						"one": [
+							"Azeite extra",
+							"Beterraba",
+							"Brigadeiro",
+							"Caldo de ameixa",
+							"Caldo de cereja",
+							"Caneta marca texto",
+							"Canetinha hidrocor",
+							"Caramelo",
+							"Cerveja clara",
+							"Cerveja preta"
+						],
+						"two": [
+							"Refrigerante de cola",
+							"Cola branca",
+							"Látex escolar",
+							"Creme de pitaya ",
+							"Enxaguante bucal",
+							"Refrigerante de uva",
+							"Geleia de amora",
+							"Geleia de morango",
+							"Gema de ovo",
+							"Gordura de bacon"
+						],
+						"three": [
+							"Groselha",
+							"Iodo",
+							"Iogurte de morango",
+							"Ketchup",
+							"Lápis de cor",
+							"Manga",
+							"Manteiga",
+							"Maquiagem",
+							"Mel",
+							"Mingau de aveia"
+						],
+						"four": [
+							"Molho barbecue",
+							"Molho de tomate",
+							"Molho de pimenta",
+							"Molho de yakissoba",
+							"Óleo",
+							"Papinha (batata e cenoura / banana e aveia)",
+							"Pasta de dente",
+							"Polpa de mamão",
+							"Polpa de maracujá"
+						],
+						"five": [
+							"Sangue bovino",
+							"Sorvete de morango",
+							"Suco de laranja e de tomate"
+						]
+					}
+				}
+			}
+		},
+		"ciclo_uma_hora": {
+			"headline": {
+				"title": "Ciclo 1h",
+				"subtitle": "Pronto Para Vestir",
+				"paragraph": {
+					"default": "Sabe quando você precisa de uma roupa para sair, mas percebe que ela está suja? O Ciclo 1h Pronto para Vestir é perfeito para esta situação. Em apenas 1h*, você consegue lavar e secar uma troca** de roupas, deixando-as prontas para o uso.",
+					"mobile": "Ciclo 100% otimizado que alterna as condições ideais de temperatura e velocidade de movimentação do cesto para máxima performance de lavagem, removendo* mais de 40** tipos de manchas, desde as mais frequentes até as mais difíceis, como gordura, sangue*** e canetinha, sem danificar os tecidos."
+				},
+				"notice": {
+					"default": {
+						"paragraph": [
+							"*Pode haver uma variação de 10 minutos nesse tempo, devido ao tecido utilizado e a temperatura de resfriamento do produto, para garantir a segurança do consumidor.",
+							"**Teste realizado com uma calça, uma camiseta e uma roupa íntima."
+						]
+
+					},"mobile": {
+						"paragraph": [
+							"*Conforme teste interno de percepção realizado com 63 manchas em tecido de algodão.",
+							"** Verifique a lista de manchas testadas no manual do produto.",
+							"*** bovino"
+						]
+					}
+				}
+			},
+			"featured": {
+				"title": ""
+			},
+			"bg": {
+				"url": ""
+			}
+		},
+		"funcao_volto_logo": {
+			"headline": {
+				"title": "Função",
+				"subtitle": "Volto Logo",
+				"paragraph": {
+					"default": "A opção Volto Logo ajuda a prevenir amassados* nas roupas, mesmo que elas fiquem dentro do cesto após o término** do ciclo de lavagem."
+				}
+			}, 
+			"asterisk" : [
+				"*Comparado com as outras funções de secagem da mesma lavadora.",
+				"**Até 8 horas ininterruptas "
+			]
+		},
+		"ciclo_edredom": {
+			"headline": {
+				"title": "Ciclo",
+				"subtitle": "Edredom",
+				"paragraph": {
+					"default": "Cama, Banho, Jeans, Casaco... até Edredom pode ser lavado sem preocupação e sem esforço!²"
+				}
+			},
+			"asterisk" : "²Conforme instruções de lavagem no manual do produto."
+		}
+	}
+
+}
