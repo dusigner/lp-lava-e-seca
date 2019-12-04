@@ -1,0 +1,22 @@
+{
+    "routes": {
+        "store/lava-e-seca": {
+            "path": "/lava-e-seca"
+        }
+    },
+    "pages": {
+        "store/lava-e-seca": [{
+            "name": "Brastemp",
+            "template": "lava-e-seca"
+        }]
+    },    
+    "templates": {
+        "lava-e-seca": {
+            "component": "Index",
+            "props": {
+                "title": "Lava e Seca | Encontre sua Máquina Lava e Seca | Brastemp",
+                "description": "A lava e seca Brastemp é o modelo ideal para sua casa ou negócio. Confira as vantagens da melhor máquina lava e seca do mercado e compre online agora!"
+            }
+    }
+  }
+}
