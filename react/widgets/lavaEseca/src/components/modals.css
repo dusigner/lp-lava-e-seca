@@ -1,0 +1,164 @@
+.modal,
+.modal__compare {
+    position: relative;
+}
+
+.modal {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.modal__compare {
+    width: 844px;
+    height: 474px;
+    margin: auto;
+}
+
+.modal__heading_before,
+.modal__heading_after {
+    position: absolute;
+}
+
+.modal__heading_before {
+    top: 30px;
+    left: -15%
+}
+
+.modal__heading_after {
+    right: -15%;
+    bottom: 0;
+}
+
+.modal__compare .title-default {
+    font-size: 2rem;
+    line-height: 65px;
+}
+
+/*  */
+.modal-foo {
+    overflow: hidden;
+    max-height: 474px;
+    max-width: 844px;
+    width: 844px;
+    height: 474px;
+    margin: auto;
+}
+.modal-foo figure { 
+	background-image: url('https://res.cloudinary.com/dins1gjdy/image/upload/v1575303726/whirlpool/diferenciais__modalCompare_before_j1y3wg.png');
+	background-size: cover;
+	font-size: 0;
+	height: 100%;
+	margin: 0; 
+	position: relative;
+	width: 100%; 
+}
+#compare {
+	background-image: url('https://res.cloudinary.com/dins1gjdy/image/upload/v1575296345/whirlpool/diferenciais__modalCompare_after_pgtto4.png');
+	background-size: cover;
+	bottom: 0;
+	border-right: 5px solid rgba(255,255,255,0.7);
+	box-shadow: 10px 0 15px -13px #000;
+	height: 100%;
+	max-width: 98.6%;
+	min-width: 0.6%;
+	overflow: visible;
+	position: absolute;
+	width: 50%; 
+	animation: first 2s 1 normal ease-in-out 0.1s; 
+	-webkit-animation: first 2s 1 normal ease-in-out 0.1s; 
+}
+input#slider {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border: none; 
+	background: transparent;
+	cursor: col-resize;
+	height: 100vw;
+	left: 0;
+	margin: 0;
+	outline: none; 
+	padding: 0;
+	position: relative;
+	top: -100vw;
+	width: 100%;
+}
+input#slider::-moz-range-track { 
+	background: transparent; 
+}
+input#slider::-ms-track {
+	border: none; 
+	background-color: transparent;
+	height: 100vw; 
+	left: 0; 
+	outline: none; 
+	position: relative;
+	top: -100vw; 
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	cursor: col-resize;
+	color:transparent;
+}
+input#slider::-ms-fill-lower {
+	background-color:transparent;
+}
+input#slider::-webkit-slider-thumb {
+	-webkit-appearance:none;
+	height: 100vw;
+	width: 0.5%;
+	opacity: 0;
+}
+input#slider::-moz-range-thumb {
+	-moz-appearance: none;
+	height: 100vw;
+	width: 0.5%;
+	opacity: 0;
+}   
+input#slider::-ms-thumb {
+	height: 100vw;
+	width: 0.5%; 
+	opacity:0;
+}
+input#slider::-ms-tooltip {
+	display:none;
+}
+#compare::before {
+	background: url(https://webdevtrick.com/wp-content/uploads/comparision.png) no-repeat scroll 0 center transparent;
+	background-size:contain;
+	content: " ";
+	float: right;
+	height: 100%;
+	margin-right: -34px;
+	position: relative;
+	top:0;
+	width: 64px;
+}
+
+.is-compare .modal-foo {
+    display: initial;
+}
+
+.is-see-more .modal-bar {
+    display: initial;
+}
+
+.is-see-more .modal-foo {
+    display: none;
+}
+
+.is-compare .modal-bar {
+    display: none;
+}
+
+@keyframes first {
+    0% {width: 0%; }
+    50% {width: 80%; }
+    100% {width: 50%; }
+  }
+  @-webkit-keyframes first {
+    0% {width: 0%; }
+    50% {width: 80%; }
+    100% {width: 50%; }
+  }
+

@@ -1,0 +1,64 @@
+.link__btn {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-flex;
+    height: 40px;
+    align-items: center;
+    font-family: Soleto,sans-serif;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    font-size: 14px;
+    padding-right: 20px;
+    transition: all .3s ease-out;
+}
+
+.btn__icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .875rem;
+    background: rgba(240, 139, 29, 1);
+    margin: 0 9px 0 5px;
+    transition: all .3s ease-out;
+}
+
+.btn-outline {
+    display: flex;
+    min-width: 116px;
+    min-height: 33px;
+    height: 33px;
+    padding: 15px;
+    justify-content: space-around;
+    align-items: center;
+    color: rgba(240, 139, 29, 1);
+    border-radius: 15px;
+    border: solid 1px rgba(240, 139, 29, 1); 
+}
+
+.btn-outline__icon {
+    order: 2;
+}
+
+.modal .btn-outline {
+    position: absolute;
+    top: 38px;
+    right: 38px
+}
+
+.btn__icon_type {
+    display: flex;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #db532a, #f08b1d);
+}
+
+.btn:hover .btn__icon{
+    transform: rotate(90deg);
+    background: transparent;
+} 
