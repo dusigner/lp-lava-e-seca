@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { CardProdutoVitrine } from "brastemp.components";
 
 // Libs
 import Slider from "react-slick";
@@ -488,7 +489,30 @@ class lavaESeca extends React.Component {
 					<div className="container">
 						<h4>Brastemp, especialista em lavagem, agora em lava & seca!</h4>
 					</div>
+
+					{/* <CardProdutoVitrine
+						key={index}
+						brand={"Brastemp"}
+						position={index + 1}
+						produto={item}
+						categoria={item.categoriaNome}
+						page={page}
+						list={list}
+						price={price}
+						installment={installment}
+						comparar={comparar}
+						handleCompareProducts={this.handleCompareProducts}
+						products={products[index].linkText}
+						pageDepartment={pageDepartment}
+						disableCompareBtn={disableCompareBtn}
+						listPrice={listPrice}
+						buttonTitle={buttonTitle}
+						cardHibrid={cardHibrid}
+						external={external}
+					/> */}
+					
 				</Sections>
+
 
 				<aside className="container-overlay  invisible">
 					<ButtonOutline label="Fechar" /> 

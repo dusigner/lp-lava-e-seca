@@ -55,6 +55,12 @@
     justify-self: center;
 }
 
+.diferencias .section-page__paragraph {
+    font-weight: 300;
+}
+.diferencias .btn {
+    background: #58595B;
+}
 /* Layout break points */
 @media (min-width: 579px) {
     .diferencias {
@@ -86,7 +92,7 @@
         width: 100%;
         height: 100%;
         background: rgba(0,255,255,0);
-        opacity: .75;
+        opacity: .2;
     }
 
     .diferencias__frame-bg:before,

@@ -7,20 +7,6 @@ class lavaESeca extends Component {
     constructor(props) {
         super(props);
     }
-
-    replaceImageURI() {
-        document.querySelectorAll('img')
-            .forEach(img => {
-                let src = img.getAttribute('src')
-                .replace('/_v/public/', '/_v/private/')
-                .replace('published', 'linked');
-                img.setAttribute('src', src);
-            });
-    }
-    
-    componentDidMount() {
-        this.replaceImageURI();
-    }
    
     render () { 
         return(
