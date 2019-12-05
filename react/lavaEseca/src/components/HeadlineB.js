@@ -2,7 +2,7 @@ import React from 'react'
 
 export default props => {
 
-    const getNoticeParagraphList = list => list.map(typeStain => <p className="section-page__paragraph  paragraph-notice  some">{typeStain}</p>)
+    const getNoticeParagraphList = list => list.map(typeStain => <p className={`section-page__paragraph  paragraph-notice`}>{typeStain}</p>)
 
     const getParagraphNode = mobile => {
         const getClassStateValue = mobile ? "is-mobile" : "is-default"
@@ -21,8 +21,9 @@ export default props => {
                 <span>{props.subtitle}</span>
             </h4>
             {paragraph_content}
-            {getNoticeParagraphList(props.noticeParagraphList)}
-            {/* <p className="section-page__paragraph  paragraph-notice">{props.notice}</p> */}
+            <div className={`container-notice ${props.position}`}>
+                {getNoticeParagraphList(props.noticeParagraphList)}
+            </div>
         </div>
     )
 }
