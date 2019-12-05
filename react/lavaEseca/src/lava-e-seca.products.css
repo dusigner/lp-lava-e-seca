@@ -1,0 +1,20 @@
+.products h4{
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 125.7%;
+    text-align: center;
+    color: #000000;
+    position: relative;
+    margin-bottom: 40px;
+    padding-bottom: 12px;
+}
+
+.products h4::after {
+    content: "";
+    height: 6px;
+    width: 166px;
+    position: absolute;
+    bottom: 0;
+    left: calc( 50% - 83px);
+    background: linear-gradient(91.78deg, #F08B1D 49.94%, #DB882A 136.63%);
+}
