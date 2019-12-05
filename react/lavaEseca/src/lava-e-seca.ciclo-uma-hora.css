@@ -10,6 +10,10 @@
     padding: 0 20px;
 }
 
+.ciclo-uma-hora .title-default {
+    line-height: initial; 
+}
+
 .ciclo-uma-hora .section-page__paragraph {
     max-width: 404px;
     color: rgba(0,0,0,1);
@@ -22,6 +26,8 @@
 
 .ciclo-uma-hora .section-page__paragraph {
     font-size: .875rem;
+    font-size: 14px;
+    font-weight: 100;
 }
 
 .ciclo-uma-hora .paragraph-notice {
@@ -65,10 +71,26 @@
     }
 }
 
+.ciclo-uma-hora .see-more {
+    visibility: hidden;
+}
+
+@media (min-width: 680px) {
+    .ciclo-uma-hora .see-more {
+        visibility: visible;
+    }
+}
+
 @media (min-width: 959px) {
     .ciclo-uma-hora {
         padding: 30px 0;
         background-image: url('../imgs/ciclo-uma-hora__cover.png');      
+    }
+
+    .ciclo-uma-hora .section-page__paragraph {
+        font-size: .875rem;
+        font-size: 16px;
+        line-height: 22px;
     }
 }
 

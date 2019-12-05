@@ -27,9 +27,9 @@
 			"title": "Diferenciais",
 			"headline": {
 				"title": "Certificado",
-				"subtitle": "Woolmark Apparel Carel",
+				"subtitle": "Woolmark",
 				"paragraph": {
-					"default": "Lave suas roupas com o máximo cuidado até as lãs mais dedicadas."
+					"default": "Lava suas roupas com o máximo cuidado até as lãs mais delicadas."
 				}
 			},
 			"bg": {
@@ -38,8 +38,8 @@
 		},
 		"ciclo_tira_mancha": {
 			"headline": {
-				"title": "Ciclo",
-				"subtitle": "Tira Manchas Pro",
+				"title": "Tira Manchas",
+				"subtitle": "Pro",
 				"paragraph": {
 					"default": "Ciclo 100% otimizado que alterna as condições ideais de temperatura e velocidade de movimentação do cesto para máxima performance de lavagem, removendo* mais de 40** tipos de manchas, desde as mais frequentes até as mais difíceis, como gordura, sangue*** e canetinha, sem danificar os tecidos."
 				},

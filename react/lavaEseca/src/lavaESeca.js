@@ -6,7 +6,8 @@ import StickyBox from "react-sticky-box";
 
 // Components
 import properties from '../public/props.json'
-import Headline from './components/Headline' 
+import Headline from './components/Headline'
+import HeadlineB from './components/HeadlineB' 
 import Sections from './components/Section'
 import Menu from './components/Menu'
 import Button from './components/Button'
@@ -58,6 +59,10 @@ import cicloEdredomLarge from '../imgs/ciclo-edredon-1178.png';
 import cicloTiraManchasCoverMid from '../imgs/ciclo-tira-manchas__cover_mid.png';
 import cicloTiraManchasFeaturedImageCanetinha from '../imgs/tira-manchas__featured-canetinha_mid.png';
 import cicloTiraManchasFeaturedImageGordura from '../imgs/tira-manchas__featured-gordura_mid.png';
+
+// const cicloTiraManchasCoverMid = "https://res.cloudinary.com/dins1gjdy/image/upload/v1575296961/whirlpool/ciclo-tira-manchas__cover_mid_rtkb1e.png"
+// const cicloTiraManchasFeaturedImageCanetinha = 'https://res.cloudinary.com/dins1gjdy/image/upload/v1575242021/whirlpool/tira-manchas__featured-canetinha_mid_jfe42z.png';
+// const cicloTiraManchasFeaturedImageGordura = 'https://res.cloudinary.com/dins1gjdy/image/upload/v1575242031/whirlpool/tira-manchas__featured-gordura_mid_rrzeah.png';
 
 import cicloUmaHoraFeaturedImageCoverMid from '../imgs/ciclo-uma-hora__cover_mid.png';
 
@@ -304,20 +309,33 @@ class lavaESeca extends React.Component {
 							<div className="section-page__featured_content">
 
 								<div className="featured__heading">
-									<Headline 
+									<HeadlineB 
 										title={properties.sections.ciclo_tira_mancha.headline.title}
 										subtitle={properties.sections.ciclo_tira_mancha.headline.subtitle}
 										paragraphDefault={properties.sections.ciclo_tira_mancha.headline.paragraph.default}
-										notice={properties.sections.ciclo_tira_mancha.headline.notice.default.paragraph[0]}
+										position="is-above"
+										noticeParagraphList={properties.sections.ciclo_tira_mancha.headline.notice.default.paragraph}
 																
 									>
-									</Headline>			
+									</HeadlineB>			
 								</div>
 
 								<div className="featured_cover  my-default">
 									<picture className="featured_cover__image-container  border">
-										<img src={cicloTiraManchasCoverMid} srcSet="" title=""/>
+										<img className="featured__image" src={cicloTiraManchasCoverMid} srcSet="" title=""/>
 									</picture>
+								</div>
+
+								<div className="featured__heading  is-notice-below">
+									<HeadlineB 
+										// title={properties.sections.ciclo_tira_mancha.headline.title}
+										// subtitle={properties.sections.ciclo_tira_mancha.headline.subtitle}
+										// paragraphDefault={properties.sections.ciclo_tira_mancha.headline.paragraph.default}
+										position="is-below"
+										noticeParagraphList={properties.sections.ciclo_tira_mancha.headline.notice.default.paragraph}
+																
+									>
+									</HeadlineB>			
 								</div>
 
 								<div className="featured__call-to-action  my-default">
@@ -381,15 +399,15 @@ class lavaESeca extends React.Component {
 							<div className="section-page__featured_content">
 
 								<div className="featured__heading">
-									<Headline
+									<HeadlineB
 										// mobile={ window.innerWidth <= 679 } 
 										title={properties.sections.ciclo_uma_hora.headline.title}
 										subtitle={properties.sections.ciclo_uma_hora.headline.subtitle}
 										paragraphDefault={properties.sections.ciclo_uma_hora.headline.paragraph.default}
-										paragraphMobile={properties.sections.ciclo_uma_hora.headline.paragraph.mobile}
-										notice={properties.sections.ciclo_uma_hora.headline.notice.default.paragraph[0]}																
+										// paragraphMobile={properties.sections.ciclo_uma_hora.headline.paragraph.mobile}
+										noticeParagraphList={properties.sections.ciclo_uma_hora.headline.notice.default.paragraph}																
 									>
-									</Headline>			
+									</HeadlineB>			
 								</div>
 
 								<div className="featured_cover  my-default">
@@ -398,7 +416,7 @@ class lavaESeca extends React.Component {
 									</picture>
 								</div>
 								
-								<p className="section-page__paragraph  paragraph-notice">{properties.sections.ciclo_uma_hora.headline.notice.default.paragraph[0]}</p>
+								{/* <p className="section-page__paragraph  paragraph-notice">{properties.sections.ciclo_uma_hora.headline.notice.default.paragraph[0]}</p> */}
 								
 								<div className="featured__call-to-action">
 									<SeeMore link="#funcao-volto-logo" label="Veja mais" />
