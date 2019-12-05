@@ -63,6 +63,17 @@ import cicloUmaHoraFeaturedImageCoverMid from '../imgs/ciclo-uma-hora__cover_mid
 
 class lavaESeca extends React.Component {
 
+	replaceImageURI() {
+        document.querySelectorAll('img')
+            .forEach(img => {
+                let src = img.getAttribute('src')
+                .replace('/_v/public/', '/_v/private/')
+                .replace('published', 'linked');
+                img.setAttribute('src', src);
+            });
+    }
+ 
+
 	state = { currentSrc: '' };
 
 	onLoad = (event) => {
@@ -80,6 +91,7 @@ class lavaESeca extends React.Component {
 
 	componentDidMount() {
 		window.onscroll = () => this.handleScroll();
+		this.replaceImageURI();
 	}
 
 	handleScroll() {
@@ -452,6 +464,12 @@ class lavaESeca extends React.Component {
 
 				<Sections id="play-video" setClass="play-video">
 					<Video setSrc="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" />
+				</Sections>
+
+				<Sections id="products" setClass="products section">
+					<div className="container">
+						<h4>Brastemp, especialista em lavagem, agora em lava & seca!</h4>
+					</div>
 				</Sections>
 
 				<aside className="container-overlay  invisible">
