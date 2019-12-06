@@ -14,7 +14,9 @@
     "react-select": "2.0.0",
     "react-slick": "0.23.1",
     "react-sticky-box": "^0.9.1",
-    "slick-carousel": "1.8.1"
+    "slick-carousel": "1.8.1",
+    "apollo-client-preset": "^1.0.8",
+    "graphql-tag": "^2.7.3"
   },
   "devDependencies": {}
 }

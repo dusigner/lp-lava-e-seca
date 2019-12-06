@@ -1,4 +1,8 @@
-.products h4{
+.products {
+    padding-top: 28px;
+    padding-bottom: 40px;
+}
+.products h2{
     font-weight: 300;
     font-size: 32px;
     line-height: 125.7%;
@@ -7,9 +11,13 @@
     position: relative;
     margin-bottom: 40px;
     padding-bottom: 12px;
+    text-align: center;
+    max-width: 324px;
+    margin: auto;
+    margin-bottom: 41px;
 }
 
-.products h4::after {
+.products h2::after {
     content: "";
     height: 6px;
     width: 166px;
@@ -17,4 +25,37 @@
     bottom: 0;
     left: calc( 50% - 83px);
     background: linear-gradient(91.78deg, #F08B1D 49.94%, #DB882A 136.63%);
+}
+.products .container .title{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+
+
+
+@media (min-width: 1200px) {
+    .products {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .products .container {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    .products h2{
+        margin-bottom: auto;
+        font-size: 48px;
+    }
+    .slider-products {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slider-products .slick-slider {
+        max-width: 760px;
+    }
+    
+    
 }

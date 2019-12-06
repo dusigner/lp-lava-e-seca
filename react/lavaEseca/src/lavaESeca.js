@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { CardProdutoVitrine } from "brastemp.components";
+import { Query } from 'react-apollo';
+import ProductShowcaseQuery from './produto.gql'
 
 // Libs
 import Slider from "react-slick";
@@ -69,17 +71,16 @@ import cicloUmaHoraFeaturedImageCoverMid from '../imgs/ciclo-uma-hora__cover_mid
 
 class lavaESeca extends React.Component {
 
-	replaceImageURI() {
-        document.querySelectorAll('img')
-            .forEach(img => {
-                let src = img.getAttribute('src')
-                .replace('/_v/public/', '/_v/private/')
-                .replace('published', 'linked');
-                img.setAttribute('src', src);
-            });
-    }
- 
-
+	// replaceImageURI() {
+    //     document.querySelectorAll('img')
+    //         .forEach(img => {
+    //             let src = img.getAttribute('src')
+    //             .replace('/_v/public/', '/_v/private/')
+    //             .replace('published', 'linked');
+	// 			img.setAttribute('src', src);
+	// 		});
+	// }
+	
 	state = { currentSrc: '' };
 
 	onLoad = (event) => {
@@ -97,7 +98,7 @@ class lavaESeca extends React.Component {
 
 	componentDidMount() {
 		window.onscroll = () => this.handleScroll();
-		this.replaceImageURI();
+		//this.replaceImageURI();
 	}
 
 	handleScroll() {
@@ -125,7 +126,7 @@ class lavaESeca extends React.Component {
 			afterChange: function(index) {
 				document.getElementById("sliderNumber").innerHTML = index + 1;
 				if(index == 0)
-					console.log("Painel Full Touch");
+					console.log("Painel Full Touch2");
 				if(index == 1)
 					console.log("Sofisticado Design");
 				if(index == 2)
@@ -145,6 +146,24 @@ class lavaESeca extends React.Component {
 				if(index == 1)
 				console.log("Cor Branca");
 			  }
+		};
+
+		const settingsThree = {
+			dots: true,
+			arrow: false,
+			infinite: false,
+			//slidesToShow: 2,
+			slidesToShow: 1,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 1,
+						arrow: false,
+						dots: false,
+					}
+				}
+			]
 		};
 
 		return (
@@ -487,29 +506,89 @@ class lavaESeca extends React.Component {
 
 				<Sections id="products" setClass="products section">
 					<div className="container">
-						<h4>Brastemp, especialista em lavagem, agora em lava & seca!</h4>
-					</div>
+						<div className="title">
+							<h2>Brastemp, especialista em lavagem, agora em lava & seca! seca</h2>
+						</div>
 
-					{/* <CardProdutoVitrine
-						key={index}
-						brand={"Brastemp"}
-						position={index + 1}
-						produto={item}
-						categoria={item.categoriaNome}
-						page={page}
-						list={list}
-						price={price}
-						installment={installment}
-						comparar={comparar}
-						handleCompareProducts={this.handleCompareProducts}
-						products={products[index].linkText}
-						pageDepartment={pageDepartment}
-						disableCompareBtn={disableCompareBtn}
-						listPrice={listPrice}
-						buttonTitle={buttonTitle}
-						cardHibrid={cardHibrid}
-						external={external}
-					/> */}
+						{/* <Query query={ProductShowcaseQuery}>
+									{({ loading, data }) => {
+
+										if(loading)
+											return (<p>loading</p>)
+
+											console.log(data)
+
+										
+										const produtos = {
+
+											price : data.product.items[0].sellers[0].commertialOffer.Price,
+											listPrice : data.product.items[0].sellers[0].commertialOffer.ListPrice,
+											installment : data.product.items[0].sellers[0].commertialOffer.Installments,
+											title: data.product.productName,
+											skuProduto: data.product.items[0].referenceId[0].Value,
+											
+
+											modelo: [
+												{
+													imageUrl: data.product.items[0].images[0].imageUrl,
+													slug: "maquina-de-lavar-brastemp-12kg-branca-agua-quente-com-ciclo-tira-manchas-pro-e-ciclo-antibolinha",
+												}
+											]
+										}
+
+										console.log(produtos)
+
+										return (
+											<CardProdutoVitrine 
+												brand={"Brastemp"}
+												produto={produtos}
+												// installment={false}
+												// listPrice={false}
+												// price={false}
+												// position={1}
+												// categoria={"lava-seca"}
+												// list={"lava-seca"}
+											/>
+										)
+										
+									}}
+								</Query> */}
+
+						<div className="slider-products">
+
+						<Slider {...settingsThree}>
+							<div>
+								
+
+								{/* <CardProdutoVitrine
+										key={index}
+										brand={"Brastemp"}
+										position={index + 1}
+										produto={item}
+										categoria={item.categoriaNome}
+										page={page}
+										list={list}
+										price={price}
+										installment={installment}
+										comparar={comparar}
+										handleCompareProducts={this.handleCompareProducts}
+										products={products[index].linkText}
+										pageDepartment={pageDepartment}
+										disableCompareBtn={disableCompareBtn}
+										listPrice={listPrice}
+										buttonTitle={buttonTitle}
+										cardHibrid={cardHibrid}
+										external={external}
+									/> */}
+
+
+							</div>
+						</Slider>
+
+						</div>
+
+						
+					</div>
 					
 				</Sections>
 
