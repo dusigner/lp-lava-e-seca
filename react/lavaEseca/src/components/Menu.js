@@ -85,9 +85,9 @@ class Menu extends React.Component {
                     </svg>
                     <span>Ciclo Edredom</span>
                 </AnchorLink>
-                <a>
+                <AnchorLink offset={() => 55} href='#products' className="links">
                     <span>Eu quero!</span>
-                </a>
+                </AnchorLink>
             </nav>
         </div>
     )

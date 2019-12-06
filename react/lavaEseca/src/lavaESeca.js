@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { CardProdutoVitrine } from "brastemp.components";
 import { Query } from 'react-apollo';
 import ProductShowcaseQuery from './produto.gql'
+import ProductShowcaseQuery2 from './produto2.gql'
 
 // Libs
 import Slider from "react-slick";
@@ -153,22 +154,23 @@ class lavaESeca extends React.Component {
 			dots: true,
 			arrow: false,
 			infinite: false,
-			//slidesToShow: 2,
-			slidesToShow: 1,
+			slidesToShow: 2,
+			//slidesToShow: 1,
 			responsive: [
 				{
-					breakpoint: 1024,
+					breakpoint: 767,
 					settings: {
 						slidesToShow: 1,
 						arrow: false,
-						dots: false,
+						dots: true,
+						autoplay: true,
+						infinite: true,
 					}
 				}
 			]
 		};
 
 		return (
-
 			<div className="lava-e-seca">
 				<Sections id="intro"  setClass="intro animation"> 
 					<div className="container">
@@ -508,85 +510,83 @@ class lavaESeca extends React.Component {
 				<Sections id="products" setClass="products section">
 					<div className="container">
 						<div className="title">
-							<h2>Brastemp, especialista em lavagem, agora em lava & seca! seca</h2>
+							<h2>Brastemp, autoridade em performance de lavagem</h2>
 						</div>
 
-						<BoxProdutoVitrine />
-
-						{/* <Query query={ProductShowcaseQuery}>
-									{({ loading, data }) => {
-
-										if(loading)
-											return (<p>loading</p>)
-
-											console.log(data)
-
-										
-										const produtos = {
-
-											price : data.product.items[0].sellers[0].commertialOffer.Price,
-											listPrice : data.product.items[0].sellers[0].commertialOffer.ListPrice,
-											installment : data.product.items[0].sellers[0].commertialOffer.Installments,
-											title: data.product.productName,
-											skuProduto: data.product.items[0].referenceId[0].Value,
-											
-
-											modelo: [
-												{
-													imageUrl: data.product.items[0].images[0].imageUrl,
-													slug: "maquina-de-lavar-brastemp-12kg-branca-agua-quente-com-ciclo-tira-manchas-pro-e-ciclo-antibolinha",
-												}
-											]
-										}
-
-										console.log(produtos)
-
-										return (
-											<CardProdutoVitrine 
-												brand={"Brastemp"}
-												produto={produtos}
-												// installment={false}
-												// listPrice={false}
-												// price={false}
-												// position={1}
-												// categoria={"lava-seca"}
-												// list={"lava-seca"}
-											/>
-										)
-										
-									}}
-								</Query> */}
-
 						<div className="slider-products">
+							<Slider {...settingsThree}>
+								<div>
+									<Query query={ProductShowcaseQuery}>
+										{({ loading, data }) => {
+											
+											const produtos = {
+												price : data.product.items[0].sellers[0].commertialOffer.Price,
+												listPrice : data.product.items[0].sellers[0].commertialOffer.ListPrice,
+												installment : data.product.items[0].sellers[0].commertialOffer.Installments,
+												title: data.product.productName,
+												skuProduto: data.product.items[0].referenceId[0].Value,
+												modelo: [
+													{
+														imageUrl: data.product.items[0].images[0].imageUrl,
+														slug: data.product.linkText
+													}
+												]
+											};
 
-						<Slider {...settingsThree}>
-							<div>
-								
-
-								{/* <CardProdutoVitrine
-										key={index}
-										brand={"Brastemp"}
-										position={index + 1}
-										produto={item}
-										categoria={item.categoriaNome}
-										page={page}
-										list={list}
-										price={price}
-										installment={installment}
-										comparar={comparar}
-										handleCompareProducts={this.handleCompareProducts}
-										products={products[index].linkText}
-										pageDepartment={pageDepartment}
-										disableCompareBtn={disableCompareBtn}
-										listPrice={listPrice}
-										buttonTitle={buttonTitle}
-										cardHibrid={cardHibrid}
-										external={external}
-									/> */}
-
-
-							</div>
-						</Slider>
+											if(loading)
+												return (<p>loading</p>)
+											return (
+												<CardProdutoVitrine 
+													produto={produtos}
+													brand={"Brastemp"}
+													position={1}
+													list={"lava-seca"}
+													categoria={"lava-seca"}
+													installment={true}
+													listPrice={true}
+													price={true}
+													page={"store/product"}
+												/>
+											)
+										}}
+									</Query>					
+								</div>
+								<div>
+									<Query query={ProductShowcaseQuery}>
+										{({ loading, data }) => {
+											if(loading)
+												return (<p>loading</p>)
+												//console.log(data)
+											const produtos = {
+												price : data.product.items[0].sellers[0].commertialOffer.Price,
+												listPrice : data.product.items[0].sellers[0].commertialOffer.ListPrice,
+												installment : data.product.items[0].sellers[0].commertialOffer.Installments,
+												title: data.product.productName,
+												skuProduto: data.product.items[0].referenceId[0].Value,
+												modelo: [
+													{
+														imageUrl: data.product.items[0].images[0].imageUrl,
+														slug: "geladeira-brastemp-frost-free-375-litros-brm45hk",
+													}
+												]
+											}
+											return (
+												<CardProdutoVitrine 
+													produto={produtos}
+													brand={"Brastemp"}
+													position={1}
+													list={"lava-seca"}
+													categoria={"lava-seca"}
+													installment={true}
+													listPrice={true}
+													price={true}
+													page={"store/product"}
+												/>
+											)
+										}}
+									</Query>	
+								</div>
+							</Slider>
 
 						</div>
 
@@ -610,6 +610,10 @@ class lavaESeca extends React.Component {
 				</aside>
 
 			</div>
+			
+			
+			
+
 			
 		) }
 	}
