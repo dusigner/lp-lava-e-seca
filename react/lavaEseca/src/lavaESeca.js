@@ -129,7 +129,7 @@ class lavaESeca extends React.Component {
 				if(index == 0)
 					console.log("Painel Full Touch2");
 				if(index == 1)
-					console.log("Sofisticado Design");
+					console.log("Design sofisticado");
 				if(index == 2)
 					console.log("Cesto Inox");
 			  }

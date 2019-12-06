@@ -90,7 +90,7 @@
 }
 .modal-compare-image figure { 
 	/* background-image: url('https://res.cloudinary.com/dins1gjdy/image/upload/v1575303726/whirlpool/diferenciais__modalCompare_before_j1y3wg.png'); */
-	background-image: url('../../imgs/diferenciais__modalCompare_before.png');
+	background-image: url('../../imgs/diferenciais__modalCompare_after.png');
 	background-size: cover;
 	font-size: 0;
 	height: 100%;
@@ -107,12 +107,12 @@
 .modal__heading_after .title-default {
 	font-size: 1rem;
 	font-size: 16px;
-	line-height: 43px;
+	/* line-height: 43px; */
 }
 
 #compare {
 	/* background-image: url('https://res.cloudinary.com/dins1gjdy/image/upload/v1575296345/whirlpool/diferenciais__modalCompare_after_pgtto4.png'); */
-	background-image: url('../../imgs/diferenciais__modalCompare_after.png');
+	background-image: url('../../imgs/diferenciais__modalCompare_before.png');
 	background-size: cover;
 	bottom: 0;
 	border-right: 5px solid rgba(255,255,255,0.7);
@@ -314,13 +314,76 @@ input#slider::-ms-tooltip {
 	}
 }
 
-@media (min-width: 680px) {
+@media (min-height: 720px) and (max-height:768px) {
 
+	.modal__header .modal__title {
+		top: initial;
+	}
 }
 
 /* Set up to device */
+@media (min-height: 768px) and (max-height:1024px) {
+
+	.modal__heading_before {
+		top: 30vh;
+		left: 3vw;
+	}
+
+	.modal__heading_after {
+		right: 3vw;
+		bottom: 28vh;
+	}
+}
+
+
+
+@media (width: 1024px) and (max-height: 768px) {
+
+	.modal__heading_before .title-default,
+	.modal__heading_after .title-default {
+		line-height: 65px;
+	}
+
+	.modal__heading_before {
+		left: 5vw;
+	}
+
+	.modal__heading_after {
+		right: 5vw;
+	}
+}
+
+@media (width: 1280px) and (max-height: 720px) {
+	
+	.modal__heading_before {
+		top: 23vh;
+		left: 9vw;
+	}
+
+	.modal__heading_after {
+		right: 9vw;
+		bottom: 20vh;
+
+	}
+}
+
 @media (width: 1366px) and (max-height: 768px) {
 	.modal__header .modal__title {
-		top: initial
+		top: initial;
+	}
+
+	.modal__heading_before {
+		top: 25vh;
+		left: 11vw;
+	}
+
+	.modal__heading_after {
+		right: 12vw;
+		bottom: 23vh;
+	}
+	
+	.modal__heading_before .title-default,
+	.modal__heading_after .title-default {
+		line-height: 65px;
 	}
 }

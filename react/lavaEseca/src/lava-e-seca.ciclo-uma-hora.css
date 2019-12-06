@@ -95,9 +95,9 @@
 }
 
 @media (min-width: 1359px) {
-    .ciclo-uma-hora {
+    /* .ciclo-uma-hora {
         margin: 160px 0 0 0;
-    }
+    } */
 }
 
 @media (min-width: 1600px) {
@@ -118,5 +118,11 @@
     .ciclo-uma-hora .section-page__featured_cover > .featured_cover__image-container {
         visibility: visible;
         display: initial;
+    }
+}
+
+@media (width: 1366px) and (max-height: 768px) {
+    .ciclo-uma-hora {
+        margin: 230px 0 0 0;
     }
 }
