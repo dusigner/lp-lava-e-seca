@@ -1,0 +1,32 @@
+query{
+    product(slug: "lava-e-seca-brastemp-10kg-6kg-prata-agua-quente-com-ciclo-tira-manchas-pro-e-ciclo-1h-pronto-para-vestir-bnq10as"){
+        productName
+        linkText
+        items{
+        referenceId{
+            Value
+        }
+        images{
+            imageUrl
+        }
+        sellers{
+            addToCartLink
+            sellerDefault
+            commertialOffer{
+            Price
+            ListPrice
+            Installments{
+                Value
+                InterestRate
+                TotalValuePlusInterestRate
+                NumberOfInstallments
+                PaymentSystemName
+                PaymentSystemGroupName
+                Name
+            }
+            }
+        }
+        
+        }
+    }
+}
