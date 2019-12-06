@@ -11,8 +11,8 @@ class BoxProdutoVitrine extends React.Component {
             <a href="#" class="card card-product card-default has-border-on-hover">
                 <div class="card-product__img">
                     <img 
-                        alt="" 
-                        src="" 
+                        alt="{this.props.slug}"
+                        src="{this.props.imgUrl}"
                         class="card-product__img-static" 
                         crossorigin="anonymous" />
                             <div class="FlagsHightLight js-item-flagshightlight">
@@ -28,8 +28,12 @@ class BoxProdutoVitrine extends React.Component {
                                 <p class="flag [brastemp][black-friday]-até-40%-off">$[brastemp][black-friday]-até-40%-off</p>
                             </div>
                 </div>
-                <p class="card-product__sku">{this.props.sku}</p>
-                <h4 class="card-product__title">{this.props.title}</h4>
+                <p class="card-product__sku">
+                    BNQ10AS
+                </p>
+                <h4 class="card-product__title">
+                    10kg/6kg prata Água Quente com Ciclo Tira Manchas Pro e Ciclo 1h Pronto para Vestir -BNQ10AS 110V
+                </h4>
                 <div className="card-product__price">
                     <p className="card-product__price-before">
                         <span className="de">De: </span>
@@ -39,21 +43,27 @@ class BoxProdutoVitrine extends React.Component {
                         <span className="de">Por:</span> R$ 1.000,00
                     </p>
                     <p className="card-product__price-divide">
-                        {numberOfInstallments}x de{" "}
-                        {valueInstallments} sem juros<br />
-                        à vista no {promoBoleto ? 'boleto bancário: ' : 'cartão de crédito: 1x de '}{offerPriceFormated} 								
+                        12x de{" "}
+                        R$ 160,75 sem juros<br />
+                        à vista no cartão de crédito: 1x de R$ 1.929,00	
                     </p>
-                    <StampPercentage
-                        slug={modelo[0].slug}
-                        installment={installment}
-                        listPrice={listPrice}
-                    />
+                    <div className="card-product__badge card-product__badge-square card-product__badge-percentage">
+						<div className="l-flex">
+							<span className="card-product__badge-value">
+								34
+							</span>
+						</div>
+						<div className="l-flex">
+							<span className="card-product__badge-percent">%</span>
+							<span className="card-product__badge-off">OFF</span>
+						</div>
+					</div>
                 </div>
             </a>
         )
     }
 }
-export default Video;
+export default BoxProdutoVitrine;
 
 
 

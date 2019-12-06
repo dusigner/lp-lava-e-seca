@@ -19,6 +19,7 @@ import Modal from './components/Modal'
 import ModalCompareImage from './components/ModalCompareImage'
 import ModalTypeStainList from './components/ModalTypeStainList'
 import Video from './components/Video'
+import BoxProdutoVitrine from './components/BoxProdutoVitrine'
 
 // Modal
 import ButtonOutline from './components/ButtonOutlineRounded'
@@ -71,15 +72,15 @@ import cicloUmaHoraFeaturedImageCoverMid from '../imgs/ciclo-uma-hora__cover_mid
 
 class lavaESeca extends React.Component {
 
-	// replaceImageURI() {
-    //     document.querySelectorAll('img')
-    //         .forEach(img => {
-    //             let src = img.getAttribute('src')
-    //             .replace('/_v/public/', '/_v/private/')
-    //             .replace('published', 'linked');
-	// 			img.setAttribute('src', src);
-	// 		});
-	// }
+	replaceImageURI() {
+        document.querySelectorAll('img')
+            .forEach(img => {
+                let src = img.getAttribute('src')
+                .replace('/_v/public/', '/_v/private/')
+                .replace('published', 'linked');
+				img.setAttribute('src', src);
+			});
+	}
 	
 	state = { currentSrc: '' };
 
@@ -98,7 +99,7 @@ class lavaESeca extends React.Component {
 
 	componentDidMount() {
 		window.onscroll = () => this.handleScroll();
-		//this.replaceImageURI();
+		this.replaceImageURI();
 	}
 
 	handleScroll() {
@@ -509,6 +510,8 @@ class lavaESeca extends React.Component {
 						<div className="title">
 							<h2>Brastemp, especialista em lavagem, agora em lava & seca! seca</h2>
 						</div>
+
+						<BoxProdutoVitrine />
 
 						{/* <Query query={ProductShowcaseQuery}>
 									{({ loading, data }) => {
