@@ -37,6 +37,34 @@
 .slider-products .slick-slider .slick-arrow {
     display: none !important;
 }
+.slider-products .slick-slide {
+    background: white;
+}
+.slider-products .slick-dots {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.slider-products .slick-dots li{
+    width: 5px;
+    height: 5px;
+    list-style: none;
+    margin: 0 10px;
+    box-sizing: content-box;
+    transform: rotate(45deg);
+    background: #db532a;
+    border: solid 5px rgba(250, 250, 250, 1);
+    transition: all 1s ease-out;
+}
+.slider-products .slick-dots li.slick-active{
+    background: #ffffff;
+    border: solid 5px #db532a;
+    transition: all 1s ease-in;
+}
+.slider-products .slick-dots li button{
+    opacity: 0;
+}
 @media (min-width: 1200px) {
     .products {
         padding-top: 100px;

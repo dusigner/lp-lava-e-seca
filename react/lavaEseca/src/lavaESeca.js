@@ -163,7 +163,7 @@ class lavaESeca extends React.Component {
 						slidesToShow: 1,
 						arrow: false,
 						dots: true,
-						autoplay: true,
+						autoplay: false,
 						infinite: true,
 					}
 				}
