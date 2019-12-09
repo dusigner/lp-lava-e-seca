@@ -4,8 +4,6 @@ export default props => {
 
     const getStainList = list => list.map(typeStain => <li className="stain-list__item">{typeStain}</li>)
 
-    const colOne = props.columOne
-
     return (
         <React.Fragment>
             <header className="modal__header  header-list-stain">

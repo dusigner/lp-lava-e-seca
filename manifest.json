@@ -1,8 +1,8 @@
 {
   "vendor": "brastemp",
   "name": "lpbrastemp-lavaeseca",
-  "version": "0.1.2",
-  "title": "Brastemp Masterchef",
+  "version": "0.1.3",
+  "title": "Brastemp Lava e Seca",
   "description": "Landing Page Brastemp Lava e Seca",
   "defaultLocale": "pt-BR",
   "builders": {
@@ -31,6 +31,8 @@
     "vtex.store": "1.x",
     "brastemp.components": "1.x",
     "brastemp.queries": "1.x"
+   
   },
+  
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

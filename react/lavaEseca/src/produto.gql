@@ -1,0 +1,32 @@
+query{
+    product(slug: "geladeira-brastemp-frost-free-375-litros-brm45hk"){
+        productName
+        linkText
+        items{
+        referenceId{
+            Value
+        }
+        images{
+            imageUrl
+        }
+        sellers{
+            addToCartLink
+            sellerDefault
+            commertialOffer{
+            Price
+            ListPrice
+            Installments{
+                Value
+                InterestRate
+                TotalValuePlusInterestRate
+                NumberOfInstallments
+                PaymentSystemName
+                PaymentSystemGroupName
+                Name
+            }
+            }
+        }
+        
+        }
+    }
+}

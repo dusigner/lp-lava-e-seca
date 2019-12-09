@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import { CardProdutoVitrine } from "brastemp.components";
+import { Query } from 'react-apollo';
+import ProductShowcaseQuery from './produto.gql'
+import ProductShowcaseQuery2 from './produto2.gql'
 
 // Libs
 import Slider from "react-slick";
@@ -7,7 +10,8 @@ import StickyBox from "react-sticky-box";
 
 // Components
 import properties from '../public/props.json'
-import Headline from './components/Headline' 
+import Headline from './components/Headline'
+import HeadlineB from './components/HeadlineB' 
 import Sections from './components/Section'
 import Menu from './components/Menu'
 import Button from './components/Button'
@@ -16,6 +20,7 @@ import Modal from './components/Modal'
 import ModalCompareImage from './components/ModalCompareImage'
 import ModalTypeStainList from './components/ModalTypeStainList'
 import Video from './components/Video'
+import BoxProdutoVitrine from './components/BoxProdutoVitrine'
 
 // Modal
 import ButtonOutline from './components/ButtonOutlineRounded'
@@ -23,6 +28,7 @@ import ButtonOutline from './components/ButtonOutlineRounded'
 // Assets
 import './lava-e-seca.global.css';
 
+// Images
 import introBannerSmall from '../imgs/intro-banner-360.png'; //360
 import introBannerMedium from '../imgs/intro-banner-720.png'; //720
 import introBannerLarge from '../imgs/intro-banner-1060.png'; //1060
@@ -59,10 +65,34 @@ import cicloTiraManchasCoverMid from '../imgs/ciclo-tira-manchas__cover_mid.png'
 import cicloTiraManchasFeaturedImageCanetinha from '../imgs/tira-manchas__featured-canetinha_mid.png';
 import cicloTiraManchasFeaturedImageGordura from '../imgs/tira-manchas__featured-gordura_mid.png';
 
+// const cicloTiraManchasCoverMid = "https://res.cloudinary.com/dins1gjdy/image/upload/v1575296961/whirlpool/ciclo-tira-manchas__cover_mid_rtkb1e.png"
+// const cicloTiraManchasFeaturedImageCanetinha = 'https://res.cloudinary.com/dins1gjdy/image/upload/v1575242021/whirlpool/tira-manchas__featured-canetinha_mid_jfe42z.png';
+// const cicloTiraManchasFeaturedImageGordura = 'https://res.cloudinary.com/dins1gjdy/image/upload/v1575242031/whirlpool/tira-manchas__featured-gordura_mid_rrzeah.png';
+
 import cicloUmaHoraFeaturedImageCoverMid from '../imgs/ciclo-uma-hora__cover_mid.png';
 
 class lavaESeca extends React.Component {
 
+	replaceImageURI() {
+        document.querySelectorAll('img')
+            .forEach(img => {
+				let src = img.getAttribute('src').replace('/_v/public/', '/_v/private/').replace('published', 'linked');
+				let srcset = img.currentSrc.replace('/_v/public/', '/_v/private/').replace('published', 'linked');
+				img.setAttribute('src', src);
+				img.setAttribute('srcset', srcset);
+			});
+	}
+
+	// replaceImageURI() {
+    //     document.querySelectorAll('img')
+    //         .forEach(img => {
+	// 			let src = img.getAttribute('src').replace('/_v/public/', '/_v/private/').replace('published', 'linked');
+	// 			let srcset = img.getAttribute('srcset').replace('/_v/public/', '/_v/private/').replace('published', 'linked');
+	// 			img.setAttribute('src', src);
+	// 			img.setAttribute('srcset', srcset);
+	// 		});
+	// }
+	
 	state = { currentSrc: '' };
 
 	onLoad = (event) => {
@@ -80,6 +110,7 @@ class lavaESeca extends React.Component {
 
 	componentDidMount() {
 		window.onscroll = () => this.handleScroll();
+		this.replaceImageURI();
 	}
 
 	handleScroll() {
@@ -107,9 +138,9 @@ class lavaESeca extends React.Component {
 			afterChange: function(index) {
 				document.getElementById("sliderNumber").innerHTML = index + 1;
 				if(index == 0)
-					console.log("Painel Full Touch");
+					console.log("Painel Full Touch2");
 				if(index == 1)
-					console.log("Sofisticado Design");
+					console.log("Design sofisticado");
 				if(index == 2)
 					console.log("Cesto Inox");
 			  }
@@ -129,10 +160,28 @@ class lavaESeca extends React.Component {
 			  }
 		};
 
-		return (
+		const settingsThree = {
+			dots: true,
+			arrow: false,
+			infinite: false,
+			slidesToShow: 2,
+			//slidesToShow: 1,
+			responsive: [
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 1,
+						arrow: false,
+						dots: true,
+						autoplay: false,
+						infinite: true,
+					}
+				}
+			]
+		};
 
+		return (
 			<div className="lava-e-seca">
-				
 				<Sections id="intro"  setClass="intro animation"> 
 					<div className="container">
 						<div className="page-title">
@@ -293,20 +342,33 @@ class lavaESeca extends React.Component {
 							<div className="section-page__featured_content">
 
 								<div className="featured__heading">
-									<Headline 
+									<HeadlineB 
 										title={properties.sections.ciclo_tira_mancha.headline.title}
 										subtitle={properties.sections.ciclo_tira_mancha.headline.subtitle}
 										paragraphDefault={properties.sections.ciclo_tira_mancha.headline.paragraph.default}
-										notice={properties.sections.ciclo_tira_mancha.headline.notice.default.paragraph[0]}
+										position="is-above"
+										noticeParagraphList={properties.sections.ciclo_tira_mancha.headline.notice.default.paragraph}
 																
 									>
-									</Headline>			
+									</HeadlineB>			
 								</div>
 
 								<div className="featured_cover  my-default">
 									<picture className="featured_cover__image-container  border">
-										<img src={cicloTiraManchasCoverMid} srcSet="" title=""/>
+										<img className="featured__image" src={cicloTiraManchasCoverMid} srcSet="" title=""/>
 									</picture>
+								</div>
+
+								<div className="featured__heading  is-notice-below">
+									<HeadlineB 
+										// title={properties.sections.ciclo_tira_mancha.headline.title}
+										// subtitle={properties.sections.ciclo_tira_mancha.headline.subtitle}
+										// paragraphDefault={properties.sections.ciclo_tira_mancha.headline.paragraph.default}
+										position="is-below"
+										noticeParagraphList={properties.sections.ciclo_tira_mancha.headline.notice.default.paragraph}
+																
+									>
+									</HeadlineB>			
 								</div>
 
 								<div className="featured__call-to-action  my-default">
@@ -370,15 +432,15 @@ class lavaESeca extends React.Component {
 							<div className="section-page__featured_content">
 
 								<div className="featured__heading">
-									<Headline
+									<HeadlineB
 										// mobile={ window.innerWidth <= 679 } 
 										title={properties.sections.ciclo_uma_hora.headline.title}
 										subtitle={properties.sections.ciclo_uma_hora.headline.subtitle}
 										paragraphDefault={properties.sections.ciclo_uma_hora.headline.paragraph.default}
-										paragraphMobile={properties.sections.ciclo_uma_hora.headline.paragraph.mobile}
-										notice={properties.sections.ciclo_uma_hora.headline.notice.default.paragraph[0]}																
+										// paragraphMobile={properties.sections.ciclo_uma_hora.headline.paragraph.mobile}
+										noticeParagraphList={properties.sections.ciclo_uma_hora.headline.notice.default.paragraph}																
 									>
-									</Headline>			
+									</HeadlineB>			
 								</div>
 
 								<div className="featured_cover  my-default">
@@ -387,7 +449,7 @@ class lavaESeca extends React.Component {
 									</picture>
 								</div>
 								
-								<p className="section-page__paragraph  paragraph-notice">{properties.sections.ciclo_uma_hora.headline.notice.default.paragraph[0]}</p>
+								{/* <p className="section-page__paragraph  paragraph-notice">{properties.sections.ciclo_uma_hora.headline.notice.default.paragraph[0]}</p> */}
 								
 								<div className="featured__call-to-action">
 									<SeeMore link="#funcao-volto-logo" label="Veja mais" />
@@ -447,34 +509,103 @@ class lavaESeca extends React.Component {
 						<p className="small">
 							{properties.sections.ciclo_edredom.asterisk}
 						</p>
-						<SeeMore link="#play-video" label="Veja mais" />
+						<SeeMore link="#products" label="Veja mais" />
+						{/* <SeeMore link="#play-video" label="Veja mais" /> */}
 					</div>
 				</Sections>
 
-				<Sections id="play-video" setClass="play-video">
+				{/* <Sections id="play-video" setClass="play-video">
 					<Video setSrc="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" />
+				</Sections> */}
+
+				<Sections id="products" setClass="products section">
+					<div className="container">
+						<div className="title">
+							<h2>Brastemp, autoridade em performance de lavagem</h2>
+						</div>
+
+						<div className="slider-products">
+							<Slider {...settingsThree}>
+								<div>
+									<Query query={ProductShowcaseQuery}>
+										{({ loading, data }) => {
+											
+											const produtos = {
+												price : data.product.items[0].sellers[0].commertialOffer.Price,
+												listPrice : data.product.items[0].sellers[0].commertialOffer.ListPrice,
+												installment : data.product.items[0].sellers[0].commertialOffer.Installments,
+												title: data.product.productName,
+												skuProduto: data.product.items[0].referenceId[0].Value,
+												modelo: [
+													{
+														imageUrl: data.product.items[0].images[0].imageUrl,
+														slug: data.product.linkText
+													}
+												]
+											};
+
+											if(loading)
+												return (<p>loading</p>)
+											return (
+												<CardProdutoVitrine 
+													produto={produtos}
+													brand={"Brastemp"}
+													position={1}
+													list={"lava-seca"}
+													categoria={"lava-seca"}
+													installment={true}
+													listPrice={true}
+													price={true}
+													page={"store/product"}
+												/>
+											)
+										}}
+									</Query>					
+								</div>
+								<div>
+									<Query query={ProductShowcaseQuery}>
+										{({ loading, data }) => {
+											if(loading)
+												return (<p>loading</p>)
+												//console.log(data)
+											const produtos = {
+												price : data.product.items[0].sellers[0].commertialOffer.Price,
+												listPrice : data.product.items[0].sellers[0].commertialOffer.ListPrice,
+												installment : data.product.items[0].sellers[0].commertialOffer.Installments,
+												title: data.product.productName,
+												skuProduto: data.product.items[0].referenceId[0].Value,
+												modelo: [
+													{
+														imageUrl: data.product.items[0].images[0].imageUrl,
+														slug: "geladeira-brastemp-frost-free-375-litros-brm45hk",
+													}
+												]
+											}
+											return (
+												<CardProdutoVitrine 
+													produto={produtos}
+													brand={"Brastemp"}
+													position={1}
+													list={"lava-seca"}
+													categoria={"lava-seca"}
+													installment={true}
+													listPrice={true}
+													price={true}
+													page={"store/product"}
+												/>
+											)
+										}}
+									</Query>	
+								</div>
+							</Slider>
+
+						</div>
+
+						
+					</div>
+					
 				</Sections>
 
-				{/* <CardProdutoVitrine
-                    key={index}
-                    brand={"Brastemp"}
-                    position={index + 1}
-                    produto={item}
-                    categoria={item.categoriaNome}
-                    page={page}
-                    list={list}
-                    price={price}
-                    installment={installment}
-                    comparar={comparar}
-                    handleCompareProducts={this.handleCompareProducts}
-                    products={products[index].linkText}
-                    pageDepartment={pageDepartment}
-                    disableCompareBtn={disableCompareBtn}
-                    listPrice={listPrice}
-                    buttonTitle={buttonTitle}
-                    cardHibrid={cardHibrid}
-                    external={external}
-                /> */}
 
 				<aside className="container-overlay  invisible">
 					<ButtonOutline label="Fechar" /> 
@@ -490,6 +621,10 @@ class lavaESeca extends React.Component {
 				</aside>
 
 			</div>
+			
+			
+			
+
 			
 		) }
 	}
