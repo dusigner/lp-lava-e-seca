@@ -284,7 +284,6 @@ input#slider::-ms-tooltip {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
 		margin: auto;
-		margin-top: 50px;
 	}
 
 	.modal__heading_before {
