@@ -61,9 +61,11 @@
 
 .btn:hover {
     background: linear-gradient(45deg, #db532a, #f08b1d);
+    transition: all .3s ease-in;
 }
 
 .btn:hover .btn__icon{
     transform: rotate(90deg);
     background: transparent;
+    transition: all .3s ease-in;
 } 

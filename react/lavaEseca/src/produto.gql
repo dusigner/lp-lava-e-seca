@@ -1,5 +1,5 @@
 query{
-    product(slug: "geladeira-brastemp-frost-free-375-litros-brm45hk"){
+    product(slug: "lava-e-seca-brastemp-ative-10kg-6kg-branca-bns10ab"){
         productName
         linkText
         items{

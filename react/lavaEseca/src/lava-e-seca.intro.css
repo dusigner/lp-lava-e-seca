@@ -70,13 +70,15 @@
         z-index: 2;
         position: relative;
 
-        animation: 0.9s ease-in titulo
+        animation: 0.9s ease-in titulo;
+        animation-delay: 4s;
     }
     .lava-e-seca .intro {
         height: 595px;
         position: relative;
 
-        animation: 0.9s ease-in altura
+        animation: 0.9s ease-in altura;
+        animation-delay: 4s;
     }
     .lava-e-seca .intro picture {
         z-index: 1;
@@ -88,7 +90,8 @@
         align-items: flex-end;
         justify-content: center;
         
-        animation: 0.9s ease-in altura
+        animation: 0.9s ease-in altura;
+        animation-delay: 4s;
     }
     .lava-e-seca .intro picture img{
         max-width: 1060px;
@@ -96,7 +99,8 @@
         display: flex;
         margin: 0 auto;
 
-        animation: 0.9s ease-in imagem
+        animation: 0.9s ease-in imagem;
+        animation-delay: 4s;
     }
     @keyframes titulo {
         from {

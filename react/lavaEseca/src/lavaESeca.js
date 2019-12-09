@@ -563,7 +563,7 @@ class lavaESeca extends React.Component {
 									</Query>					
 								</div>
 								<div>
-									<Query query={ProductShowcaseQuery}>
+									<Query query={ProductShowcaseQuery2}>
 										{({ loading, data }) => {
 											if(loading)
 												return (<p>loading</p>)
