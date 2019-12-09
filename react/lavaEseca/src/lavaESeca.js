@@ -76,12 +76,22 @@ class lavaESeca extends React.Component {
 	replaceImageURI() {
         document.querySelectorAll('img')
             .forEach(img => {
-                let src = img.getAttribute('src')
-                .replace('/_v/public/', '/_v/private/')
-                .replace('published', 'linked');
+				let src = img.getAttribute('src').replace('/_v/public/', '/_v/private/').replace('published', 'linked');
+				let srcset = img.currentSrc.replace('/_v/public/', '/_v/private/').replace('published', 'linked');
 				img.setAttribute('src', src);
+				img.setAttribute('srcset', srcset);
 			});
 	}
+
+	// replaceImageURI() {
+    //     document.querySelectorAll('img')
+    //         .forEach(img => {
+	// 			let src = img.getAttribute('src').replace('/_v/public/', '/_v/private/').replace('published', 'linked');
+	// 			let srcset = img.getAttribute('srcset').replace('/_v/public/', '/_v/private/').replace('published', 'linked');
+	// 			img.setAttribute('src', src);
+	// 			img.setAttribute('srcset', srcset);
+	// 		});
+	// }
 	
 	state = { currentSrc: '' };
 
@@ -499,13 +509,14 @@ class lavaESeca extends React.Component {
 						<p className="small">
 							{properties.sections.ciclo_edredom.asterisk}
 						</p>
-						<SeeMore link="#play-video" label="Veja mais" />
+						<SeeMore link="#products" label="Veja mais" />
+						{/* <SeeMore link="#play-video" label="Veja mais" /> */}
 					</div>
 				</Sections>
 
-				<Sections id="play-video" setClass="play-video">
+				{/* <Sections id="play-video" setClass="play-video">
 					<Video setSrc="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" />
-				</Sections>
+				</Sections> */}
 
 				<Sections id="products" setClass="products section">
 					<div className="container">
