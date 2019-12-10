@@ -72,7 +72,6 @@ export default class tagplan {
         eventAction: 'clique_botao',
         eventLabel: 'compare'
       })
-      console.log(dataLayer);
     });
 
     $('.tag-saiba_mais').click(function () {
@@ -82,7 +81,6 @@ export default class tagplan {
         eventAction: 'clique_botao',
         eventLabel: 'saiba_mais'
       })
-      console.log(dataLayer);
     });
   }
 }
