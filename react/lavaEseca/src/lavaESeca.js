@@ -29,30 +29,30 @@ import ButtonOutline from './components/ButtonOutlineRounded'
 import './lava-e-seca.global.css';
 
 // Images
-import introBannerSmall from '../imgs/intro-banner-360.png'; //360
-import introBannerMedium from '../imgs/intro-banner-720.png'; //720
-import introBannerLarge from '../imgs/intro-banner-1060.png'; //1060
+import introBannerSmall from '../imgs/intro-banner-360.png';
+import introBannerMedium from '../imgs/intro-banner-720.png';
+import introBannerLarge from '../imgs/intro-banner-1060.png'; 
 
-//import diferenciaisImageCoverMid from '../imgs/diferenciais__cover_mid.png'; // 744
-//import diferenciaisImageCoverLarge from '../imgs/diferenciais__cover_large.png'; // 1178
+import detalhesPainelTouchSmall from '../imgs/detalhes-painel_touch-360.png'; 
+import detalhesPainelTouchMedium from '../imgs/detalhes-painel_touch-720.png';
+import detalhesPainelTouchLarge from '../imgs/detalhes-painel_touch-994.png';
+import detalhesPainelTouchXlarge from '../imgs/detalhes-painel_touch-1492';
 
-import detalhesPainelTouchSmall from '../imgs/detalhes-painel_touch-360.png'; //360
-import detalhesPainelTouchMedium from '../imgs/detalhes-painel_touch-720.png'; //720
 
-import detalhesLindoDesignGraySmall from '../imgs/detalhes-lindo_design_gray-307.png'; //307
-import detalhesLindoDesignGrayMedium from '../imgs/detalhes-lindo_design_gray-614.png'; //614
-import detalhesLindoDesignGrayLarge from '../imgs/detalhes-lindo_design_gray-852.png'; //307
-import detalhesLindoDesignGrayXlarge from '../imgs/detalhes-lindo_design_gray-1704.png'; //614
+import detalhesLindoDesignGraySmall from '../imgs/detalhes-lindo_design_gray-307.png';
+import detalhesLindoDesignGrayMedium from '../imgs/detalhes-lindo_design_gray-614.png';
+import detalhesLindoDesignGrayLarge from '../imgs/detalhes-lindo_design_gray-852.png'; 
+import detalhesLindoDesignGrayXlarge from '../imgs/detalhes-lindo_design_gray-1704.png';
 
-import detalhesLindoDesignWhiteSmall from '../imgs/detalhes-lindo_design_white-307.png'; //307
-import detalhesLindoDesignWhiteMedium from '../imgs/detalhes-lindo_design_white-614.png'; //614
-import detalhesLindoDesignWhiteLarge from '../imgs/detalhes-lindo_design_white-852.png'; //307
-import detalhesLindoDesignWhiteXlarge from '../imgs/detalhes-lindo_design_white-1704.png'; //614
+import detalhesLindoDesignWhiteSmall from '../imgs/detalhes-lindo_design_white-307.png';
+import detalhesLindoDesignWhiteMedium from '../imgs/detalhes-lindo_design_white-614.png';
+import detalhesLindoDesignWhiteLarge from '../imgs/detalhes-lindo_design_white-852.png';
+import detalhesLindoDesignWhiteXlarge from '../imgs/detalhes-lindo_design_white-1704.png';
 
-import detalhesCestoInoxSmall from '../imgs/detalhes-cesto_inox-333.png'; //333
-import detalhesCestoInoxMedium from '../imgs/detalhes-cesto_inox-666.png'; //666
-import detalhesCestoInoxLarge from '../imgs/detalhes-cesto_inox-931.png'; //333
-import detalhesCestoInoxXlarge from '../imgs/detalhes-cesto_inox-1862.png'; //666
+import detalhesCestoInoxSmall from '../imgs/detalhes-cesto_inox-333.png';
+import detalhesCestoInoxMedium from '../imgs/detalhes-cesto_inox-666.png';
+import detalhesCestoInoxLarge from '../imgs/detalhes-cesto_inox-931.png'; 
+import detalhesCestoInoxXlarge from '../imgs/detalhes-cesto_inox-1862.png';
 
 import funcaVoltoLogoSmall from '../imgs/funca-volto-logo-322.png';
 import funcaVoltoLogoMedium from '../imgs/funca-volto-logo-644.png';
@@ -73,21 +73,11 @@ import cicloUmaHoraFeaturedImageCoverMid from '../imgs/ciclo-uma-hora__cover_mid
 
 class lavaESeca extends React.Component {
 
-	replaceImageURI() {
-        document.querySelectorAll('img')
-            .forEach(img => {
-				let src = img.getAttribute('src').replace('/_v/public/', '/_v/private/').replace('published', 'linked');
-				let srcset = img.currentSrc.replace('/_v/public/', '/_v/private/').replace('published', 'linked');
-				img.setAttribute('src', src);
-				img.setAttribute('srcset', srcset);
-			});
-	}
-
 	// replaceImageURI() {
     //     document.querySelectorAll('img')
     //         .forEach(img => {
 	// 			let src = img.getAttribute('src').replace('/_v/public/', '/_v/private/').replace('published', 'linked');
-	// 			let srcset = img.getAttribute('srcset').replace('/_v/public/', '/_v/private/').replace('published', 'linked');
+	// 			let srcset = img.currentSrc.replace('/_v/public/', '/_v/private/').replace('published', 'linked');
 	// 			img.setAttribute('src', src);
 	// 			img.setAttribute('srcset', srcset);
 	// 		});
@@ -110,7 +100,7 @@ class lavaESeca extends React.Component {
 
 	componentDidMount() {
 		window.onscroll = () => this.handleScroll();
-		this.replaceImageURI();
+		//this.replaceImageURI();
 	}
 
 	handleScroll() {
@@ -225,7 +215,9 @@ class lavaESeca extends React.Component {
 										src={detalhesPainelTouchSmall} 
 										srcSet={`
 											${detalhesPainelTouchSmall} 360w, 
-											${detalhesPainelTouchMedium} 720w
+											${detalhesPainelTouchMedium} 720w,
+											${detalhesPainelTouchLarge} 994w,
+											${detalhesPainelTouchXlarge} 994w
 										`} 
 										onLoad={this.onLoad} />
 									</div>
