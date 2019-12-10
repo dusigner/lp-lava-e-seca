@@ -44,6 +44,10 @@
     left: -20px;
 }
 
+p.section-page__paragraph.paragraph-notice {
+    font-size: 10px;
+}
+
 @media (min-width: 680px) {
     .ciclo-uma-hora {
         display: flex;

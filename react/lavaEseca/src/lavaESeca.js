@@ -563,7 +563,7 @@ class lavaESeca extends React.Component {
 									</Query>					
 								</div>
 								<div>
-									<Query query={ProductShowcaseQuery}>
+									<Query query={ProductShowcaseQuery2}>
 										{({ loading, data }) => {
 											if(loading)
 												return (<p>loading</p>)
@@ -577,7 +577,7 @@ class lavaESeca extends React.Component {
 												modelo: [
 													{
 														imageUrl: data.product.items[0].images[0].imageUrl,
-														slug: "geladeira-brastemp-frost-free-375-litros-brm45hk",
+														slug: data.product.linkText
 													}
 												]
 											}

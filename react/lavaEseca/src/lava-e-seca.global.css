@@ -201,6 +201,10 @@ INSERÇÕES NO GLOBAL
     margin: 0;
     background: rgba(255,255,255,1);
     z-index: 9999;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Utils */
