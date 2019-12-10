@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 // Libs
 import BeforeAfterSlider from 'react-before-after-slider'
+import ReactCompareImage from 'react-compare-image';
 
 // Components
 import Headline from './Headline'
@@ -13,7 +14,7 @@ export default class ModalCompare extends Component {
 
         return (
             <div className="modal__compare">
-                <BeforeAfterSlider before={compareImageBefore} after={compareImageAfter} width={844} height={474}/>              
+                <ReactCompareImage leftImage={compareImageBefore} rightImage={compareImageAfter} />;
                 <div className="modal__heading_before">
                     <Headline 
                         title="Sem Woolmark"
