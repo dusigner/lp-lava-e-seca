@@ -29,6 +29,8 @@
   "dependencies": {
     "vtex.store-graphql": "2.x",
     "vtex.store": "1.x",
+    "brastemp.header": "1.x",
+    "brastemp.footer": "1.x",
     "brastemp.components": "1.x",
     "brastemp.queries": "1.x"
    
