@@ -355,7 +355,7 @@ class lavaESeca extends React.Component {
 
 								<div className="featured_cover  my-default">
 									<picture className="featured_cover__image-container  border">
-										<img className="featured__image" src={cicloTiraManchasCoverMid} srcSet="" title=""/>
+										<img className="featured__image" src={cicloTiraManchasCoverMid}  title=""/>
 									</picture>
 								</div>
 
@@ -381,16 +381,16 @@ class lavaESeca extends React.Component {
 
 									<figure className="featured__image-figure">
 										<picture className="featured__image-container  border">
-											<img className="featured__image" src={cicloTiraManchasFeaturedImageCanetinha} srcSet="" title="imagem mancha de canetinha"/> 
-											<source srcSet="" media="" type="image/jpeg"></source>
+											<img className="featured__image" src={cicloTiraManchasFeaturedImageCanetinha} title="imagem mancha de canetinha"/> 
+											<source media="" type="image/jpeg"></source>
 										</picture>
 										<figcaption className="featured__image-caption">Canetinha</figcaption>
 									</figure>
 
 									<figure className="featured__image-figure">
 										<picture className="featured__image-container  border">
-											<img className="featured__image" src={cicloTiraManchasFeaturedImageGordura} srcSet="" title="imagem mancha de gordura"/> 
-											<source srcSet="" media="" type="image/jpeg"></source>
+											<img className="featured__image" src={cicloTiraManchasFeaturedImageGordura}  title="imagem mancha de gordura"/> 
+											<source  media="" type="image/jpeg"></source>
 										</picture>
 										<figcaption className="featured__image-caption">Gordura</figcaption>
 									</figure>
@@ -399,13 +399,13 @@ class lavaESeca extends React.Component {
 								<Slider className="slider  my-default">
 
 									<picture className="featured__image-container  px-default  border">
-										<img src={cicloTiraManchasFeaturedImageCanetinha} srcSet="" title="imagem mancha de canetinha"/> 
-										<source srcSet="" media="" type="image/jpeg"></source>
+										<img src={cicloTiraManchasFeaturedImageCanetinha}  title="imagem mancha de canetinha"/> 
+										<source  media="" type="image/jpeg"></source>
 									</picture>
 
 									<picture className="featured__image-container  border">
-										<img src={cicloTiraManchasFeaturedImageGordura} srcSet="" title="imagem mancha de gordura"/> 
-										<source srcSet="" media="" type="image/jpeg"></source>
+										<img src={cicloTiraManchasFeaturedImageGordura}  title="imagem mancha de gordura"/> 
+										<source  media="" type="image/jpeg"></source>
 									</picture>
 
 								</Slider>
@@ -426,7 +426,7 @@ class lavaESeca extends React.Component {
 						<article className="section-page__featured">
 							<div className="section-page__featured_cover">
 								<picture className="featured_cover__image-container">
-									<img src={cicloUmaHoraFeaturedImageCoverMid} srcSet="" title=""/>
+									<img src={cicloUmaHoraFeaturedImageCoverMid}  title=""/>
 								</picture>
 							</div>
 							<div className="section-page__featured_content">
@@ -445,7 +445,7 @@ class lavaESeca extends React.Component {
 
 								<div className="featured_cover  my-default">
 									<picture className="featured_cover__image-container">
-										<img src={cicloUmaHoraFeaturedImageCoverMid} srcSet="" title=""/>
+										<img src={cicloUmaHoraFeaturedImageCoverMid}  title=""/>
 									</picture>
 								</div>
 								
