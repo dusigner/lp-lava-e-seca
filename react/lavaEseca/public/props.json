@@ -171,10 +171,10 @@
 				"title": "Ciclo",
 				"subtitle": "Edredom",
 				"paragraph": {
-					"default": "Cama, Banho, Jeans, Casaco... até Edredom pode ser lavado sem preocupação e sem esforço!²"
+					"default": "Cama, Banho, Jeans, Casaco... até Edredom pode ser lavado sem preocupação e sem esforço!*"
 				}
 			},
-			"asterisk" : "²Conforme instruções de lavagem no manual do produto."
+			"asterisk" : "*Conforme instruções de lavagem no manual do produto."
 		}
 	}
 

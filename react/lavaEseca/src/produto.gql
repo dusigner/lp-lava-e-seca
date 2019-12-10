@@ -1,5 +1,5 @@
 query{
-    product(slug: "lava-e-seca-brastemp-ative-10kg-6kg-branca-bns10ab"){
+    product(slug: "lava-e-seca-brastemp-10kg-6kg-prata-agua-quente-com-ciclo-tira-manchas-pro-e-ciclo-1h-pronto-para-vestir-bnq10as"){
         productName
         linkText
         items{
