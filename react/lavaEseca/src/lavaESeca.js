@@ -34,9 +34,8 @@ import introBannerMedium from '../imgs/intro-banner-720.png';
 import introBannerLarge from '../imgs/intro-banner-1060.png'; 
 
 import detalhesPainelTouchSmall from '../imgs/detalhes-painel_touch-360.png'; 
-import detalhesPainelTouchMedium from '../imgs/detalhes-painel_touch-720.png';
 import detalhesPainelTouchLarge from '../imgs/detalhes-painel_touch-994.png';
-import detalhesPainelTouchXlarge from '../imgs/detalhes-painel_touch-1492';
+import detalhesPainelTouchXlarge from '../imgs/detalhes-painel_touch-1492.png';
 
 
 import detalhesLindoDesignGraySmall from '../imgs/detalhes-lindo_design_gray-307.png';
@@ -215,9 +214,8 @@ class lavaESeca extends React.Component {
 										src={detalhesPainelTouchSmall} 
 										srcSet={`
 											${detalhesPainelTouchSmall} 360w, 
-											${detalhesPainelTouchMedium} 720w,
 											${detalhesPainelTouchLarge} 994w,
-											${detalhesPainelTouchXlarge} 994w
+											${detalhesPainelTouchXlarge} 1492w
 										`} 
 										onLoad={this.onLoad} />
 									</div>
