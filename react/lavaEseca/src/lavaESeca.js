@@ -73,21 +73,11 @@ import cicloUmaHoraFeaturedImageCoverMid from '../imgs/ciclo-uma-hora__cover_mid
 
 class lavaESeca extends React.Component {
 
-	replaceImageURI() {
-        document.querySelectorAll('img')
-            .forEach(img => {
-				let src = img.getAttribute('src').replace('/_v/public/', '/_v/private/').replace('published', 'linked');
-				let srcset = img.currentSrc.replace('/_v/public/', '/_v/private/').replace('published', 'linked');
-				img.setAttribute('src', src);
-				img.setAttribute('srcset', srcset);
-			});
-	}
-
 	// replaceImageURI() {
     //     document.querySelectorAll('img')
     //         .forEach(img => {
 	// 			let src = img.getAttribute('src').replace('/_v/public/', '/_v/private/').replace('published', 'linked');
-	// 			let srcset = img.getAttribute('srcset').replace('/_v/public/', '/_v/private/').replace('published', 'linked');
+	// 			let srcset = img.currentSrc.replace('/_v/public/', '/_v/private/').replace('published', 'linked');
 	// 			img.setAttribute('src', src);
 	// 			img.setAttribute('srcset', srcset);
 	// 		});
@@ -110,7 +100,7 @@ class lavaESeca extends React.Component {
 
 	componentDidMount() {
 		window.onscroll = () => this.handleScroll();
-		this.replaceImageURI();
+		//this.replaceImageURI();
 	}
 
 	handleScroll() {
@@ -225,7 +215,9 @@ class lavaESeca extends React.Component {
 										src={detalhesPainelTouchSmall} 
 										srcSet={`
 											${detalhesPainelTouchSmall} 360w, 
-											${detalhesPainelTouchMedium} 720w
+											${detalhesPainelTouchMedium} 720w,
+											${detalhesPainelTouchLarge} 994w,
+											${detalhesPainelTouchLarge} 994w
 										`} 
 										onLoad={this.onLoad} />
 									</div>
