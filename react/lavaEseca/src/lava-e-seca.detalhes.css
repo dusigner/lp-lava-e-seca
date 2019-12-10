@@ -54,6 +54,7 @@
 }
 .slider-detalhes .slick-prev {
     right: 80px;
+    left: unset;
 }
 .slider-detalhes .slick-next {
     right: 20px;
