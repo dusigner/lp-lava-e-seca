@@ -58,7 +58,7 @@ export default props => {
 
     }
     return (
-        <div className="btn" onClick={callToAction}>
+        <div className={`${props.setClass} btn`} onClick={callToAction}>
             <div className="btn__icon">
                 <i className="btn__icon_type">
                     <svg width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M6 0H8V14H6z"/><path transform="rotate(90 14 6)" fill="#fff" d="M14 6H16V20H14z"/></svg></i>

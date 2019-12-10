@@ -13,6 +13,7 @@
     "react-headroom": "^2.2.2",
     "react-intl": "^2.7.2",
     "react-responsive": "^5.0.0",
+    "react-responsive-picture": "^3.2.2",
     "react-scroll-to-component": "1.0.2",
     "react-select": "2.0.0",
     "react-slick": "0.23.1",
