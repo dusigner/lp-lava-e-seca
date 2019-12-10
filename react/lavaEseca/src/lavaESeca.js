@@ -577,7 +577,7 @@ class lavaESeca extends React.Component {
 												modelo: [
 													{
 														imageUrl: data.product.items[0].images[0].imageUrl,
-														slug: "geladeira-brastemp-frost-free-375-litros-brm45hk",
+														slug: data.product.linkText
 													}
 												]
 											}
