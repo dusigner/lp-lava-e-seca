@@ -12,7 +12,7 @@ export default props => {
     const paragraph_content = getParagraphNode(props.mobile)
     
     return (
-        <div className="section-page__headline">
+        <div className={`section-page__headline ${props.setClass}`}>
             <h4 className="title-default">
                 <span>{props.title}</span>
                 <br/>

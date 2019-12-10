@@ -78,8 +78,9 @@
 #ciclo-tira-manchas .paragraph-notice {
     font-size: .625rem;
     font-size: 10px;
-    line-height: 5px;
-    
+    line-height: 11px;
+    margin-bottom: 0;
+    margin-top: 2px;
 }
 
 .featured__image {

@@ -29,8 +29,8 @@
 
 .btn-outline {
     position: absolute;
-    top: 30px;
-    right: 33px;
+    top: 19px;
+    right: 23px;
     display: flex;
     min-width: 116px;
     min-height: 33px;
@@ -45,8 +45,14 @@
     z-index: 998;
 }
 
+
+.btn-outline__label {
+    font-size: 14px;
+}
+
 .btn-outline__icon {
     order: 2;
+    max-height: 13px;
 }
 
 .modal .btn-outline {

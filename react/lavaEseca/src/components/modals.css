@@ -84,7 +84,7 @@
     overflow: hidden;
     max-height: 474px;
     max-width: 844px;
-    width: 844px;
+    width: 100%;
     height: 474px;
     margin: auto;
 }
@@ -109,6 +109,7 @@
 	font-size: 16px;
 	/* line-height: 43px; */
 }
+
 
 #compare {
 	/* background-image: url('https://res.cloudinary.com/dins1gjdy/image/upload/v1575296345/whirlpool/diferenciais__modalCompare_after_pgtto4.png'); */
@@ -197,7 +198,7 @@ input#slider::-ms-tooltip {
 .modal-list-stain {
 	overflow-y: auto;
 	height: 100%;
-	margin: 150px auto auto auto;
+	margin: 70px auto auto auto;
 	/* width: 1226px; */
 
 }
@@ -224,7 +225,8 @@ input#slider::-ms-tooltip {
 
 .is-compare .header-compare-image,
 .is-compare .modal-compare-image {
-    display: initial;
+	display: initial;
+	top: 0;
 }
 
 .is-see-more .header-list-stain {

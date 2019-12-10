@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { CardProdutoVitrine, StoredDatalayer } from "brastemp.components";
 import { Query } from 'react-apollo';
+import { Picture } from 'react-responsive-picture';
 import ProductShowcaseQuery from './produto.gql'
 import ProductShowcaseQuery2 from './produto2.gql'
 
@@ -178,19 +179,19 @@ class lavaESeca extends React.Component {
 				if(index == 0)
 					dataLayer.push({
 						eventCategory: 'lp_lava_e_seca',
-						eventAction: 'clique_slide',
+						eventAction: 'carrossel',
 						eventLabel: 'painel_full_touch'
 					})
 				if(index == 1)
 					dataLayer.push({
 						eventCategory: 'lp_lava_e_seca',
-						eventAction: 'clique_slide',
+						eventAction: 'carrossel',
 						eventLabel: 'design_sofisticado'
 					})
 				if(index == 2)
 					dataLayer.push({
 						eventCategory: 'lp_lava_e_seca',
-						eventAction: 'clique_slide',
+						eventAction: 'carrossel',
 						eventLabel: 'cesto_inox'
 					})
 			  }
@@ -206,13 +207,13 @@ class lavaESeca extends React.Component {
 				if(index == 0)
 					dataLayer.push({
 						eventCategory: 'lp_lava_e_seca',
-						eventAction: 'clique_slide',
+						eventAction: 'carrossel',
 						eventLabel: 'design_sofisticado_lavaseca_prata'
 					})
 				if(index == 1)
 					dataLayer.push({
 						eventCategory: 'lp_lava_e_seca',
-						eventAction: 'clique_slide',
+						eventAction: 'carrossel',
 						eventLabel: 'design_sofisticado_lavaseca_branco'
 					})
 			  }
@@ -249,17 +250,26 @@ class lavaESeca extends React.Component {
 							<SeeMore link="#detalhes" label="Saiba mais"/>
 						</div>
 					</div>
-						<picture>
-							<img 
-								alt={properties.sections.intro.title}  
-								src={introBannerSmall} 
-								srcSet={`
-									${introBannerSmall} 360w, 
-									${introBannerMedium} 720w, 
-									${introBannerLarge} 1060w
-								`} 
-								onLoad={this.onLoad} />
-						</picture>
+					<Picture src={`${introBannerSmall}`} 
+						sources = {[
+							{
+								srcSet: introBannerSmall,
+								media: "(max-width: 380px)",
+							},
+							{
+								srcSet: introBannerMedium,
+								media: "(max-width: 740px)",
+							},
+							{
+								srcSet: introBannerLarge,
+								media: "(max-width: 1060px)",
+							},
+							{
+								srcSet: introBannerLarge,
+								media: "(min-width: 1060px)",
+							}
+						]}
+					/>
 				</Sections>
 				<StickyBox className={`menu-sticky ${this.state.menuStiky}`}>
 					<Menu  />
@@ -278,21 +288,33 @@ class lavaESeca extends React.Component {
 										subtitle={properties.sections.detalhes.headline[0].subtitle}
 									></Headline>
 									<div>
-										<img 
-										alt={properties.intro_full_touch}  
-										src={detalhesPainelTouchSmall} 
-										srcSet={`
-											${detalhesPainelTouchSmall} 360w, 
-											${detalhesPainelTouchLarge} 994w,
-											${detalhesPainelTouchXlarge} 1492w
-										`} 
-										onLoad={this.onLoad} />
+										<Picture src={`${detalhesPainelTouchSmall}`} 
+											sources = {[
+												{
+													srcSet: detalhesPainelTouchSmall,
+													media: "(max-width: 380px)",
+												},
+												{
+													srcSet: detalhesPainelTouchLarge,
+													media: "(max-width: 994px)",
+												},
+												{
+													srcSet: detalhesPainelTouchXlarge,
+													media: "(max-width: 1492px)",
+												},
+												{
+													srcSet: detalhesPainelTouchXlarge,
+													media: "(min-width: 1492px)",
+												}
+											]}
+										/>
 									</div>
 								</div>
 							</div>
 							<div>
 								<div className="slider-detalhes__slide">
 									<Headline 
+										setClass="desing-sofisticado"
 										title={properties.sections.detalhes.headline[1].title}
 										subtitle={properties.sections.detalhes.headline[1].subtitle}
 									></Headline>
@@ -300,30 +322,58 @@ class lavaESeca extends React.Component {
 										<Slider className="slider-lindo" {...settingsTwo}>
 											<div>
 												<div className="slider-lindo__slide">
-													<img 
-													alt={properties.intro_full_touch}  
-													src={detalhesLindoDesignGraySmall} 
-													srcSet={`
-														${detalhesLindoDesignGraySmall} 306w, 
-														${detalhesLindoDesignGrayMedium} 614w,
-														${detalhesLindoDesignGrayLarge} 852w, 
-														${detalhesLindoDesignGrayXlarge} 1704w
-													`} 
-													onLoad={this.onLoad} />
+													<Picture src={`${detalhesLindoDesignGraySmall}`} 
+														sources = {[
+															{
+																srcSet: detalhesLindoDesignGraySmall,
+																media: "(max-width: 306px)",
+															},
+															{
+																srcSet: detalhesLindoDesignGrayMedium,
+																media: "(max-width: 614px)",
+															},
+															{
+																srcSet: detalhesLindoDesignGrayLarge,
+																media: "(max-width: 852px)",
+															},
+															{
+																srcSet: detalhesLindoDesignGrayXlarge,
+																media: "(max-width: 1704px)",
+															},
+															{
+																srcSet: detalhesLindoDesignGrayXlarge,
+																media: "(min-width: 1704px)",
+															}
+														]}
+													/>
 												</div>
 											</div>
 											<div>
 												<div className="slider-lindo__slide">
-													<img 
-													alt={properties.intro_full_touch}  
-													src={detalhesLindoDesignWhiteSmall} 
-													srcSet={`
-														${detalhesLindoDesignWhiteSmall} 306w, 
-														${detalhesLindoDesignWhiteMedium} 614w,
-														${detalhesLindoDesignWhiteLarge} 852w, 
-														${detalhesLindoDesignWhiteXlarge} 1704w
-													`} 
-													onLoad={this.onLoad} />
+													<Picture src={`${detalhesLindoDesignWhiteSmall}`} 
+														sources = {[
+															{
+																srcSet: detalhesLindoDesignWhiteSmall,
+																media: "(max-width: 306px)",
+															},
+															{
+																srcSet: detalhesLindoDesignWhiteMedium,
+																media: "(max-width: 614px)",
+															},
+															{
+																srcSet: detalhesLindoDesignWhiteLarge,
+																media: "(max-width: 852px)",
+															},
+															{
+																srcSet: detalhesLindoDesignWhiteXlarge,
+																media: "(max-width: 1704px)",
+															},
+															{
+																srcSet: detalhesLindoDesignWhiteXlarge,
+																media: "(min-width: 1704px)",
+															}
+														]}
+													/>
 												</div>
 											</div>
 										</Slider>
@@ -337,17 +387,33 @@ class lavaESeca extends React.Component {
 										subtitle={properties.sections.detalhes.headline[2].subtitle}
 									></Headline>
 									<div>
-										<img 
+										<Picture 
+											src={`${detalhesCestoInoxSmall}`}
 											className="detalhes-cesto_inox"
-											alt={properties.intro_full_touch}  
-											src={detalhesCestoInoxSmall} 
-											srcSet={`
-												${detalhesCestoInoxSmall} 333w, 
-												${detalhesCestoInoxMedium} 666w,
-												${detalhesCestoInoxLarge} 931w,
-												${detalhesCestoInoxXlarge} 1862w
-											`} 
-											onLoad={this.onLoad} />
+											sources = {[
+												{
+													srcSet: detalhesCestoInoxSmall,
+													media: "(max-width: 333px)",
+												},
+												{
+													srcSet: detalhesCestoInoxMedium,
+													media: "(max-width: 666px)",
+												},
+												{
+													srcSet: detalhesCestoInoxLarge,
+													media: "(max-width: 931px)",
+												},
+												{
+													srcSet: detalhesCestoInoxXlarge,
+													media: "(max-width: 1862px)",
+												},
+												{
+													srcSet: detalhesCestoInoxXlarge,
+													media: "(min-width: 1862px)",
+												}
+											]}
+										/>
+								
 									</div>
 								</div>
 							</div>
@@ -380,7 +446,7 @@ class lavaESeca extends React.Component {
 								</div>
 
 								<div className="featured__call-to-action  my-default">
-									<Button link="#" label="Compare" className="tag-compare"></Button>
+									<Button link="#" label="Compare" setClass="tag-compare"></Button>
 								</div>
 							</div>
 						</article>
@@ -388,7 +454,7 @@ class lavaESeca extends React.Component {
 					</div>
 				</Sections>
 
-				<Sections id="ciclo-tira-manchas" setClass="ciclo-tira-manchas  section">
+				<Sections id="ciclo-tira-manchas" setClass="ciclo-tira-manchas section">
 
 					<div className="container">
 
@@ -431,7 +497,7 @@ class lavaESeca extends React.Component {
 								</div>
 
 								<div className="featured__call-to-action  my-default">
-									<Button link="#" label="Saiba mais" className="tag-saiba_mais"></Button>
+									<Button link="#" label="Saiba mais" setClass="tag-saiba_mais"></Button>
 								</div>
 
 								<aside className="featured__thumbnail  my-default">
@@ -531,9 +597,7 @@ class lavaESeca extends React.Component {
 							<img 
 								alt={properties.sections.funcao_volto_logo.headline.title}  
 								src={funcaVoltoLogoSmall} 
-								srcSet={`.section-page__featured {
-									grid-row: 3;
-								}
+								srcSet={`
 									${funcaVoltoLogoSmall} 322w, 
 									${funcaVoltoLogoMedium} 644w
 								`} 
