@@ -1,7 +1,10 @@
 {
   "dependencies": {
     "apollo-client": "^2.4.7",
+    "apollo-client-preset": "^1.0.8",
     "graphql": "^14.0.2",
+    "graphql-tag": "^2.7.3",
+    "jquery": "^3.4.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-apollo": "^2.3.2",
     "react-before-after-slider": "^1.0.4",
@@ -14,9 +17,7 @@
     "react-select": "2.0.0",
     "react-slick": "0.23.1",
     "react-sticky-box": "^0.9.1",
-    "slick-carousel": "1.8.1",
-    "apollo-client-preset": "^1.0.8",
-    "graphql-tag": "^2.7.3"
+    "slick-carousel": "1.8.1"
   },
   "devDependencies": {}
 }
