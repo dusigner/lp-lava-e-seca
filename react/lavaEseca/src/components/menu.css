@@ -1,4 +1,4 @@
-.lava-e-seca  .menu {
+.lava-e-seca .menu {
     background: #fff;
     width: 100%;
     display: block;
@@ -38,6 +38,11 @@
     background: linear-gradient(91.35deg, #F08B1D 49.94%, #DB882A 136.63%);
 }
 
+.lava-e-seca .menu nav a:last-child::before,
+.lava-e-seca .menu nav a.active:last-child::before {
+    background: transparent;
+}
+
 .lava-e-seca .menu nav a.active svg path  {
     fill: #F08B1D;
 }
@@ -48,6 +53,11 @@
 .lava-e-seca .menu nav a:last-child {
     background:#F8F8F8;
     padding: 0 20px;
+}
+.lava-e-seca .menu nav a:last-child:hover span,
+.lava-e-seca .menu nav a.active:last-child span {
+    background: #DB532A;
+    color: #fff;
 }
 
 .lava-e-seca  .menu nav a:last-child span{

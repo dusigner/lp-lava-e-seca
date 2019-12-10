@@ -79,7 +79,5 @@ export default class tagplan {
         eventLabel: 'saiba_mais'
       })
     });
-
-
   }
 }
