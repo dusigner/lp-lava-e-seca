@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { CardProdutoVitrine } from "brastemp.components";
+import { CardProdutoVitrine, StoredDatalayer } from "brastemp.components";
 import { Query } from 'react-apollo';
 import ProductShowcaseQuery from './produto.gql'
 import ProductShowcaseQuery2 from './produto2.gql'
@@ -93,15 +93,65 @@ class lavaESeca extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-		   menuStiky: 'show'
+		  datalayer: [],
+		  menuStiky: 'show'
 		}
-	}
+	
+		this.dispatchedData = 0;
+		StoredDatalayer.clean();
+		StoredDatalayer.start({
+		  event: 'virtualPageview',
+		  step: `categoria/lava-e-seca`,
+		});
+	  }
 
 
-	componentDidMount() {
+	  componentDidMount() {
 		window.onscroll = () => this.handleScroll();
 		//this.replaceImageURI();
-	}
+		const dataCategory = {
+		  page: {
+			type: 'category',
+			currencyCode: 'BRL',
+			category: "lava-e-seca",
+			promos: []
+		  }
+		};
+	
+		StoredDatalayer.set(dataCategory);
+		this.datalayerCategory();
+	  }
+
+	  datalayerCategory = () => {
+		const { searchQuery } = this.props;
+	
+		// ----- START - Read Products Objects
+		let tempDatalayer = StoredDatalayer.get()
+		let products = []
+	
+		if (tempDatalayer.event === 'updateImpressions') {
+		  products = tempDatalayer.impressions || []
+		} else {
+		  products = tempDatalayer.page.impressions || []
+		}
+	
+		tempDatalayer.step = `categoria/lava-e-seca`
+	
+		if (products.length && products.length >= (searchQuery.products.length - this.dispatchedData)) {
+		  StoredDatalayer.dispatch();
+	
+		  if (tempDatalayer.event && tempDatalayer.event === 'updateImpressions') {
+			this.currDatalayer = tempDatalayer.impressions || []
+		  } else {
+			this.currDatalayer = tempDatalayer.page.impressions || []
+		  }
+		  this.dispatchedData = searchQuery.products.length
+	
+		} else {
+		  StoredDatalayer.interval(this.datalayerCategory);
+		}
+		// ----- End - Read Products Objects
+	  }
 
 	handleScroll() {
 	   	if (document.documentElement.scrollTop > 595) {
@@ -126,11 +176,23 @@ class lavaESeca extends React.Component {
 			afterChange: function(index) {
 				document.getElementById("sliderNumber").innerHTML = index + 1;
 				if(index == 0)
-					console.log("Painel Full Touch2");
+					dataLayer.push({
+						eventCategory: 'lp_lava_e_seca',
+						eventAction: 'clique_slide',
+						eventLabel: 'painel_full_touch'
+					})
 				if(index == 1)
-					console.log("Design sofisticado");
+					dataLayer.push({
+						eventCategory: 'lp_lava_e_seca',
+						eventAction: 'clique_slide',
+						eventLabel: 'design_sofisticado'
+					})
 				if(index == 2)
-					console.log("Cesto Inox");
+					dataLayer.push({
+						eventCategory: 'lp_lava_e_seca',
+						eventAction: 'clique_slide',
+						eventLabel: 'cesto_inox'
+					})
 			  }
 		};
 		const settingsTwo = {
@@ -142,9 +204,17 @@ class lavaESeca extends React.Component {
 			afterChange: function(index) {
 				document.getElementById("sliderNumber").innerHTML = index + 1;
 				if(index == 0)
-				console.log("Cor Prata");
+					dataLayer.push({
+						eventCategory: 'lp_lava_e_seca',
+						eventAction: 'clique_slide',
+						eventLabel: 'design_sofisticado_lavaseca_prata'
+					})
 				if(index == 1)
-				console.log("Cor Branca");
+					dataLayer.push({
+						eventCategory: 'lp_lava_e_seca',
+						eventAction: 'clique_slide',
+						eventLabel: 'design_sofisticado_lavaseca_branco'
+					})
 			  }
 		};
 
@@ -310,7 +380,7 @@ class lavaESeca extends React.Component {
 								</div>
 
 								<div className="featured__call-to-action  my-default">
-									<Button link="#" label="Compare"></Button>
+									<Button link="#" label="Compare" className="tag-compare"></Button>
 								</div>
 							</div>
 						</article>
@@ -361,7 +431,7 @@ class lavaESeca extends React.Component {
 								</div>
 
 								<div className="featured__call-to-action  my-default">
-									<Button link="#" label="Saiba mais"></Button>
+									<Button link="#" label="Saiba mais" className="tag-saiba_mais"></Button>
 								</div>
 
 								<aside className="featured__thumbnail  my-default">
