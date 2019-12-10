@@ -97,15 +97,14 @@ class lavaESeca extends React.Component {
 		}
 	}
 
+
 	componentDidMount() {
 		window.onscroll = () => this.handleScroll();
 		//this.replaceImageURI();
 	}
 
 	handleScroll() {
-		const altura = document.getElementById('intro').clientHeight;
-
-	   if (document.documentElement.scrollTop > altura) {
+	   	if (document.documentElement.scrollTop > 595) {
 		  this.setState({
 			menuStiky: 'hidden',
 		  })
@@ -171,7 +170,7 @@ class lavaESeca extends React.Component {
 
 		return (
 			<div className="lava-e-seca">
-				<Sections id="intro"  setClass="intro animation"> 
+				<Sections id="intro" ref={ (divElement) => { this.divElement = divElement } } setClass="intro animation"> 
 					<div className="container">
 						<div className="page-title">
 							<h2 className="subtitle-h2">{properties.sections.intro.subtitle}</h2>
