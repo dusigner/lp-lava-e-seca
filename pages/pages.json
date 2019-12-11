@@ -1,7 +1,7 @@
 {
     "routes": {
       "store/lava-e-seca": {
-        "path": "/eletrodomesticos/lava-e-seca-2019"
+        "path": "/eletrodomesticos/lava-e-seca"
       }
     },
     "pages": {
