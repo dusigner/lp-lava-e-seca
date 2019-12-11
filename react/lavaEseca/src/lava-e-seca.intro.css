@@ -43,6 +43,12 @@
     align-items: center;
 }
 
+.lava-e-seca .intro picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (min-width: 1200px) {
     .lava-e-seca .intro .subtitle-h2 {
         font-size: 18px;

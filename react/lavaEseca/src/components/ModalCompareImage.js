@@ -14,6 +14,9 @@ export default class ModalCompare extends React.Component {
         const containerElementToImagesCompare = document.querySelector('#compare')
 
         containerElementToImagesCompare.style.width = sliderInstance.value + '%'
+
+        //alert("iphone");
+
     }
 
     render() {
@@ -26,7 +29,8 @@ export default class ModalCompare extends React.Component {
                     <figure>
                         <div id="compare"></div>
                     </figure>
-                    <input id="slider" onInput={this.beforeAfter} onChange={this.beforeAfter} type="range" min="0" max="100" value="50" />
+                    <input type="range" id="slider"  onInput={this.beforeAfter} onChange={this.beforeAfter}  min="0" max="100" ></input>
+                    {/* <input id="slider" onInput={this.beforeAfter} onChange={this.beforeAfter} type="range" min="0" max="100" value="50" /> */}
                 </div>
                 <div className="modal__heading_before">
                     <Headline 

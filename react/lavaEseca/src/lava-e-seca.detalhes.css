@@ -129,6 +129,11 @@
     border: 2px solid #DB532A;
 }
 
+/* .slider-detalhes .desing-sofisticado h4 {
+    font-size: 26px;
+    line-height: 58px;
+} */
+
 @media (min-width: 1024px) {
     .lava-e-seca .detalhes .title-h3 {
         width: 237px;
@@ -187,10 +192,7 @@
         margin-top: 212px;
         position: absolute;
     }
-    .slider-detalhes .desing-sofisticado h4 {
-        font-size: 26px;
-        line-height: 58px;
-    }
+    
     .slider-detalhes__slide {
         display: grid;
         grid-template-columns: 20% 80%;
@@ -262,5 +264,9 @@
     .slick-slide img {
         max-height: 627px;
     }
+    /* .slider-detalhes .desing-sofisticado h4 {
+        font-size: 3rem;
+        line-height: 97px;
+    } */
     
 }
