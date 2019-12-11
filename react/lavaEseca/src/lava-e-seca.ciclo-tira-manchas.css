@@ -96,6 +96,42 @@
     display: none;
 }
 
+.ciclo-tira-manchas .slick-track .slick-slide:first-child .slide-manchas{
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.ciclo-tira-manchas .slick-track .slick-slide:last-child .slide-manchas{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.slide-manchas caption {
+    position: absolute;
+    font-family: Soleto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 153.2%;
+    background: #FFFFFF;
+    padding: 5px;
+    bottom: 15px;
+    left: 19px;
+}
+.slide-manchas caption::after {
+    content: "";
+    width: 100%;
+    background: linear-gradient(91.38deg, #F08B1D 49.94%, #DB882A 136.63%);
+    height: 4px;
+    display: flex;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+}
+
+
+
 @media (min-width: 680px) {
     .ciclo-tira-manchas {
         min-height: 700px; 

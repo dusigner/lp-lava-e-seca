@@ -1,9 +1,9 @@
 .ciclo-uma-hora {
-    min-height: 628px;
+    /*min-height: 628px;*/
     background: rgba(255,255,255,1);
     background-position: 0 50%;
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 61%;
 }
 
 .ciclo-uma-hora .container {

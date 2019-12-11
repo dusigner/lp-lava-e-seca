@@ -239,6 +239,18 @@ class lavaESeca extends React.Component {
 			]
 		};
 
+		const settingsManchas = {
+			dots: false,
+			arrow: false,
+			infinite: false,
+			slidesToShow: 1,
+			centerMode: true,
+			centerPadding: "20px",
+		
+		};
+
+		
+
 		return (
 			<div className="lava-e-seca">
 				<Sections id="intro" ref={ (divElement) => { this.divElement = divElement } } setClass="intro animation"> 
@@ -254,7 +266,7 @@ class lavaESeca extends React.Component {
 						sources = {[
 							{
 								srcSet: introBannerSmall,
-								media: "(max-width: 380px)",
+								media: "(max-width: 360px)",
 							},
 							{
 								srcSet: introBannerMedium,
@@ -445,7 +457,7 @@ class lavaESeca extends React.Component {
 									</Headline>			
 								</div>
 
-								<div className="featured__call-to-action  my-default">
+								<div className="featured__call-to-action my-default">
 									<Button link="#" label="Compare" setClass="tag-compare"></Button>
 								</div>
 							</div>
@@ -521,23 +533,25 @@ class lavaESeca extends React.Component {
 									</figure>
 								</aside>
 
-								<Slider className="slider  my-default">
-
-									<picture className="featured__image-container  px-default  border">
-										<img src={cicloTiraManchasFeaturedImageCanetinha}  title="imagem mancha de canetinha"/> 
-										<source  media="" type="image/jpeg"></source>
-									</picture>
-
-									<picture className="featured__image-container  border">
-										<img src={cicloTiraManchasFeaturedImageGordura}  title="imagem mancha de gordura"/> 
-										<source  media="" type="image/jpeg"></source>
-									</picture>
-
-								</Slider>
+								
 							</div>
 						</article>
 
 					</div>
+					<Slider className="slider my-default" {...settingsManchas}>
+						<div className="slide-manchas" style={{ width: 100 }}>
+							<picture className="featured__image-container border">
+								<caption>Canetinha</caption>
+								<img src={cicloTiraManchasFeaturedImageCanetinha}  title="imagem mancha de canetinha"/> 
+							</picture>
+						</div>
+						<div className="slide-manchas" style={{ width: 100 }}>
+							<picture className="featured__image-container border">
+								<caption>Gordura</caption>
+								<img src={cicloTiraManchasFeaturedImageGordura}  title="imagem mancha de gordura"/> 
+							</picture>
+						</div>
+					</Slider>
 				</Sections>
 				
 				<Sections id="ciclo-uma-hora" setClass="ciclo-uma-hora  section">
@@ -568,11 +582,7 @@ class lavaESeca extends React.Component {
 									</HeadlineB>			
 								</div>
 
-								<div className="featured_cover  my-default">
-									<picture className="featured_cover__image-container">
-										<img src={cicloUmaHoraFeaturedImageCoverMid}  title=""/>
-									</picture>
-								</div>
+								
 								
 								{/* <p className="section-page__paragraph  paragraph-notice">{properties.sections.ciclo_uma_hora.headline.notice.default.paragraph[0]}</p> */}
 								
@@ -583,6 +593,12 @@ class lavaESeca extends React.Component {
 							</div>
 						</article>
 
+					</div>
+
+					<div className="featured_cover  my-default">
+						<picture className="featured_cover__image-container">
+							<img src={cicloUmaHoraFeaturedImageCoverMid}  title=""/>
+						</picture>
 					</div>
 				</Sections>								
 
